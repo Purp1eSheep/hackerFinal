@@ -2,6 +2,7 @@
 export const Config = {
     DATA_PATH: 'assets/data/all_questions.csv',
     MANIFEST_PATH: 'assets/data/manifest.json',
+    HANDOUTS_PATH: 'assets/data/handouts.json',
     SFX_PATH: 'assets/sfx/',
     WEIGHT_DEFAULT: 10,
     WEIGHT_UNATTEMPTED: 100,

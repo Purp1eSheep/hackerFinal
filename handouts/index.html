@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="twilight">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ 網路安全與道德駭客 — 學習講義手冊</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 頂部導航欄 (行動端顯示) -->
+        <header class="mobile-header">
+            <button id="sidebar-toggle" class="icon-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <span class="logo-text">🛡️ 學習講義手冊</span>
+            <button id="theme-toggle-mobile" class="icon-btn">🌓</button>
+        </header>
+
+        <!-- 側邊導航欄 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <span class="brand-icon">🛡️</span>
+                    <div>
+                        <h1 class="brand-name">Hacker Study</h1>
+                        <p class="brand-sub">網路安全與道德駭客</p>
+                    </div>
+                </div>
+                <button id="theme-toggle-desktop" class="icon-btn" title="切換主題模式">🌓</button>
+            </div>
+
+            <!-- 進度看板 -->
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-title">📚 學習進度</span>
+                    <span id="progress-percent" class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar-fill" style="width: 0%"></div>
+                </div>
+                <div id="progress-text" class="progress-text">已完成 0 / 12 單元</div>
+            </div>
+
+            <!-- 搜尋框 -->
+            <div class="search-box">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" placeholder="搜尋講義內容或主題...">
+            </div>
+
+            <!-- 導航菜單 -->
+            <nav class="nav-menu" id="nav-menu">
+                <div class="loading-placeholder">載入導航選單中...</div>
+            </nav>
+        </aside>
+
+        <!-- 遮罩層 (行動端側邊欄開啟時) -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- 主內容區域 -->
+        <main class="main-content">
+            <div class="content-wrapper" id="content-wrapper">
+                
+                <!-- 講義本文顯示區 -->
+                <article class="handout-article" id="handout-article">
+                    <!-- 預設歡迎畫面 -->
+                    <div class="welcome-screen">
+                        <div class="welcome-icon">📚</div>
+                        <h2 class="welcome-title">歡迎使用資安與道德駭客講義手冊</h2>
+                        <p class="welcome-desc">請在左側選單中選擇科目與子主題，或利用搜尋功能尋找特定的安全技術與防禦策略。</p>
+                        
+                        <div class="welcome-features">
+                            <div class="feature-card">
+                                <div class="feature-emoji">🛡️</div>
+                                <h4>三大科目全面收錄</h4>
+                                <p>涵蓋道德駭客偵查、MITRE 網頁攻擊、與無線藍牙安全等必修領域。</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-emoji">💡</div>
+                                <h4>題庫精選對接</h4>
+                                <p>每個章節底部附帶精選模擬考題，支援即時作答與答案解析。</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-emoji">📊</div>
+                                <h4>進度追蹤紀錄</h4>
+                                <p>可手動標記「已讀」以追蹤個人學習進度，資料會自動儲存。</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 考題互動區 -->
+                <section class="questions-section hidden" id="questions-section">
+                    <h3 class="section-title">💡 相關考題練習</h3>
+                    <div class="questions-list" id="questions-list">
+                        <!-- 考題卡片動態載入 -->
+                    </div>
+                </section>
+
+                <!-- 底部分頁導航 -->
+                <footer class="article-footer hidden" id="article-footer">
+                    <button id="prev-topic-btn" class="nav-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>上一單元</span>
+                    </button>
+                    
+                    <button id="mark-read-btn" class="read-btn">
+                        <span class="checkbox-box"></span>
+                        <span class="read-btn-text">標記為已讀</span>
+                    </button>
+                    
+                    <button id="next-topic-btn" class="nav-btn">
+                        <span>下一單元</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- 載入講義資料 -->
+    <script src="handouts-data.js"></script>
+    <!-- 載入主應用程式邏輯 -->
+    <script src="app.js"></script>
+</body>
+</html>

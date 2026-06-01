@@ -102,6 +102,7 @@ async function init() {
 function initEvents() {
     // 畫面導航
     document.getElementById('browse-btn').onclick = () => { initBrowser(); UI.switchScreen('browser'); };
+    document.getElementById('handout-btn').onclick = () => { window.open('./handouts/index.html', '_blank'); };
     document.getElementById('browser-back-btn').onclick = () => { UI.switchScreen('select'); checkProgress(); };
     document.getElementById('back-btn').onclick = () => { 
         clearTimeout(State.redirectTimer); 
