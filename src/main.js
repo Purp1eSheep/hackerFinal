@@ -5,6 +5,21 @@ import { UI } from './modules/ui.js';
 
 // --- Core Initialization ---
 async function init() {
+    // 套用客製化參數
+    if (Config.appTitle) {
+        document.title = Config.appTitle;
+        const titleEl = document.getElementById('app-title');
+        if (titleEl) titleEl.textContent = Config.appTitle;
+    }
+    if (Config.appSubtitle) {
+        const subtitleEl = document.getElementById('app-subtitle');
+        if (subtitleEl) subtitleEl.textContent = Config.appSubtitle;
+    }
+    if (Config.githubRepoUrl) {
+        const githubEl = document.getElementById('github-link');
+        if (githubEl) githubEl.href = Config.githubRepoUrl;
+    }
+
     initSettings();
     initEvents();
     checkProgress();
@@ -283,29 +298,40 @@ function openAIPrompt(q, userSelected) {
     const optText = q.options.map((o, i) => `${State.OPTION_LABELS[i]}. ${o}`).join('\n');
     
     let userSelectInfo = "";
+    let userSelectTrap = "請分析其他錯誤選項常見的干擾點或觀念陷阱。";
     if (userSelected && userSelected.length > 0) {
         const userText = userSelected.map(i => `${State.OPTION_LABELS[i]}. ${q.options[i]}`).join('、');
         userSelectInfo = `\n【使用者選的錯誤答案】\n${userText}\n`;
+        userSelectTrap = `重點分析為什麼使用者選的「${userText}」是錯誤的。請指出該選項的觀念錯誤之處，以及它與正確答案的本質區別。`;
     }
     
-    DOM.aiPromptText.value = `你是一位專業的講師，擅長釐清學生的觀念誤區。
+    let prompt = Config.aiPromptTemplate || `你是一位專業的講師，擅長釐清學生的觀念誤區。
 請針對以下這題考題進行詳細解析：
 
 【題目】
-${q.question}
+{{question}}
 
 【選項】
-${optText}
+{{options}}
 
 【正確答案】
-${correctOptions}
-${userSelectInfo}
+{{correctOptions}}
+{{userSelectInfo}}
 【解析需求】
-1. **正確答案解析**：請詳細說明為什麼「${correctOptions}」才是正確的，其背後的理論、技術細節或邏輯依據為何。
-2. **錯誤陷阱分析**：${userSelectInfo ? `重點分析為什麼使用者選的「${userSelectInfo.split('\n')[2]}」是錯誤的。請指出該選項的觀念錯誤之處，以及它與正確答案的本質區別。` : "請分析其他錯誤選項常見的干擾點或觀念陷阱。"}
+1. **正確答案解析**：請詳細說明為什麼「{{correctOptions}}」才是正確的，其背後的理論、技術細節或邏輯依據為何。
+2. **錯誤陷阱分析**：{{userSelectTrap}}
 3. **觀念釐清**：用一句話總結如何區分正確與錯誤選項的關鍵特徵。
 
 請以繁體中文回答，條列式呈現，語氣專業、精簡且直擊重點。`;
+
+    prompt = prompt
+        .replace(/{{question}}/g, q.question)
+        .replace(/{{options}}/g, optText)
+        .replace(/{{correctOptions}}/g, correctOptions)
+        .replace(/{{userSelectInfo}}/g, userSelectInfo)
+        .replace(/{{userSelectTrap}}/g, userSelectTrap);
+
+    DOM.aiPromptText.value = prompt;
     DOM.aiModal.classList.add('active');
 }
 
@@ -485,8 +511,8 @@ function checkProgress() {
 
 function initSettings() {
     const themeDescriptions = {
-        dark: '🌌 預設深色模式，保護眼睛。',
-        light: '☀️ 簡潔亮色模式，適合明亮環境。',
+        dark: '📟 駭客終端：綠色螢光與極客黑，進入駭客思維。',
+        light: '☀️ 到底誰還在用淺色？你是不是有心理變態跟反社會人格？瞎眼警告！',
         charcoal: '🖤 炭黑柔和：專業深灰背景，色彩飽和但不刺眼。',
         twilight: '🌆 暮光沈穩：紮實深藍灰，長時間閱讀首選。',
         'slate-purple': '🔮 石板灰紫：優雅低調的暗紫色系塊。',
@@ -527,6 +553,40 @@ function initSettings() {
         document.documentElement.setAttribute('data-lefthand', State.leftHanded);
         document.getElementById('lefthand-status').textContent = State.leftHanded ? '已開啟' : '已關閉';
     };
+
+    // 字型設定初始化
+    let fontType = Storage.get(Storage.KEYS.FONTTYPE, 'auto');
+    const updateFontUI = (type) => {
+        const statusEl = document.getElementById('font-status');
+        if (!statusEl) return;
+        
+        if (type === 'mono') {
+            document.documentElement.setAttribute('data-font-type', 'mono');
+            statusEl.textContent = '等寬字型 (Monospace)';
+        } else if (type === 'sans') {
+            document.documentElement.setAttribute('data-font-type', 'sans');
+            statusEl.textContent = '無襯線字型 (Sans-Serif)';
+        } else {
+            document.documentElement.removeAttribute('data-font-type');
+            statusEl.textContent = '跟隨主題預設';
+        }
+    };
+    updateFontUI(fontType);
+
+    const fontToggleCard = document.getElementById('font-toggle-card');
+    if (fontToggleCard) {
+        fontToggleCard.onclick = () => {
+            if (fontType === 'auto') {
+                fontType = 'mono';
+            } else if (fontType === 'mono') {
+                fontType = 'sans';
+            } else {
+                fontType = 'auto';
+            }
+            Storage.set(Storage.KEYS.FONTTYPE, fontType);
+            updateFontUI(fontType);
+        };
+    }
 
     // 測題題數設定
     State.quizCount = Storage.get(Storage.KEYS.QUIZ_COUNT, 40);

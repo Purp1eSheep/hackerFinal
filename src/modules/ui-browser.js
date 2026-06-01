@@ -7,7 +7,14 @@ export const UIBrowser = {
         const stats = Storage.get(Storage.KEYS.STATS, {});
         const bookmarks = Storage.get(Storage.KEYS.BOOKMARKS, []);
         const searchTerm = document.getElementById('search-input').value.toLowerCase();
-        const targetTopic = document.getElementById('topic-filter').value;
+        
+        const topicFilter = document.getElementById('topic-filter');
+        if (topicFilter && topicFilter.options.length <= 1) {
+            const topics = [...new Set(State.globalQuestions.map(q => q.topic))].sort();
+            topicFilter.innerHTML = '<option value="">所有主題</option>' + topics.map(t => `<option value="${t}">${t}</option>`).join('');
+        }
+
+        const targetTopic = topicFilter ? topicFilter.value : '';
         const onlyBookmarked = document.getElementById('only-bookmarked').checked;
         const onlyRisky = document.getElementById('only-risky').checked;
         const listEl = document.getElementById('browser-list');

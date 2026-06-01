@@ -1,8 +1,8 @@
 ID,Question_Type,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
 9,Multiple Choice,"What is the most critical ""deadly mistake"" an ethical hacker can make before starting a test?",Not using Linux,Not getting prior approval in writing,Using free tools,Not knowing how to code,B
-10,Multiple Choice,When obtaining documented approval, what must be included?,A list of all passwords,The hacker's home address,"The plan, schedule, and systems to test",A guarantee to find all vulnerabilities,C
-11,Multiple Choice,Is it possible to find all vulnerabilities during a security test?,Yes, if you use the right tools,Yes, if you are a certified expert,No, because so many known and unknown vulnerabilities exist,No, because clients won't let you see everything,C
-12,Multiple Choice,"Regarding security vulnerabilities, which of the following is true?",100 percent, ironclad security is attainable,Maintaining 100 percent security is not attainable,One test is enough to eliminate all risks,Patching and hardening systems is useless,B
+10,Multiple Choice,"When obtaining documented approval, what must be included?",A list of all passwords,The hacker's home address,"The plan, schedule, and systems to test",A guarantee to find all vulnerabilities,C
+11,Multiple Choice,"Is it possible to find all vulnerabilities during a security test?","Yes, if you use the right tools","Yes, if you are a certified expert","No, because so many known and unknown vulnerabilities exist","No, because clients won't let you see everything",C
+12,Multiple Choice,"Regarding security vulnerabilities, which of the following is true?","100 percent, ironclad security is attainable",Maintaining 100 percent security is not attainable,One test is enough to eliminate all risks,Patching and hardening systems is useless,B
 13,Multiple Choice,Why must ethical hacking tests be performed periodically?,To charge the client more money,Because new threats and vulnerabilities surface continually,Because software never changes,To practice using new tools,B
 14,Multiple Choice,What does a ""good ethical hacker"" know?,Everything about information security,Their limitations and where to get answers,Only how to use one specific tool,How to bypass the law,B
 15,Multiple Choice,How should an ethical hacker view the target network?,From a manager's viewpoint,From a hacker's viewpoint,Only from the internal network,From a non-technical perspective,B
@@ -40,12 +40,12 @@ ID,Question_Type,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
 47,Multiple Choice,Which tool is commonly used to create a Fake WAP for testing or attacks?,SQLmap,WiFi-Pumpkin,Wireshark,Metasploit,B
 48,Multiple Choice,How does a Bait and Switch attack typically work?,Directly brute-force passwords,"Display a legitimate link first, then redirect users to malicious content",Steal session cookies,Attack a database backend,B
 49,Multiple Choice,Which is a recommended defense against SQL Injection?,Use a VPN,Use Parameterized Queries,Enable MFA,Review email logs,B
-50,Multiple Choice,When an attacker positions themselves between two communicating parties to sniff or modify data, what is this called in MITRE?,Adversary-in-the-Middle (T1557),Valid Accounts,Phishing,Boot or Logon Initialization,A
+50,Multiple Choice,"When an attacker positions themselves between two communicating parties to sniff or modify data, what is this called in MITRE?",Adversary-in-the-Middle (T1557),Valid Accounts,Phishing,Boot or Logon Initialization,A
 51,Multiple Choice,What is a common symptom of a Browser Hijacker?,The computer shuts down automatically,The homepage or search engine is changed to a malicious website,Hard drive data is encrypted,Screen resolution decreases,B
 52,Multiple Choice,"In MITRE ATT&CK, Initial Access belongs to which category?",Technique,Procedure,Tactic,Mitigation,C
 53,Multiple Choice,Which data source is most useful for detecting attackers using Valid Accounts?,Browser settings,Login logs or anomalous IP records,SQL query syntax,Ad-blocking records,B
 54,Multiple Choice,What is the best recommendation for preventing Credential Reuse?,Use a VPN,Use a password manager and enable MFA,Install antivirus software,Avoid public Wi-Fi,B
-55,Multiple Choice,During Session Hijacking, what information is typically stolen?,The user's physical hardware,Session Cookie or Session ID,The user's BIOS password,The router's SSID,B
+55,Multiple Choice,"During Session Hijacking, what information is typically stolen?",The user's physical hardware,Session Cookie or Session ID,The user's BIOS password,The router's SSID,B
 56,Multiple Choice,Exploit Public-Facing Application (T1190) is commonly associated with which attack method?,SQL Injection,Phishing,Fake WAP,Browser Hijacker,A
 57,Multiple Choice,What is the primary purpose of the MITRE ATT&CK framework?,Transform unstructured security incidents into structured attack behavior analysis,Used only for data backup,Replace all firewalls,Specifically for software development,A
 58,Multiple Choice,Which attack belongs to the category of Social Engineering?,MAC Spoofing,Watering Hole Attack,ARP Spoofing,DoS,B
@@ -62,12 +62,12 @@ ID,Question_Type,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
 69,Multiple Choice,What is the rank of ""Broken Access Control"" in OWASP Top 10 (2021)?,#3,#5,#1,#10,C
 70,Multiple Choice,Which vulnerability involves exploiting authentication or session management functions to impersonate users?,Injection,Broken Authentication,XXE,XSS,B
 71,Multiple Choice,"""Parameter tampering"" is used to modify application data between which two entities?",Database and Server,Client and Server,Router and AP,OS and Kernel,B
-72,Multiple Choice,According to the sources, why are vulnerable components dangerous?,They have no encryption,They often run with full privileges,They are only found on Windows,They slow down the network,B
+72,Multiple Choice,"According to the sources, why are vulnerable components dangerous?",They have no encryption,They often run with full privileges,They are only found on Windows,They slow down the network,B
 73,Multiple Choice,What does ""Insufficient logging and monitoring"" refer to?,Recording too much data,Detection software ignoring important event details,Using weak passwords,Not having a firewall,B
-74,Multiple Choice,Which tool supports the entire web application testing process, from mapping to exploiting vulnerabilities?,Metasploit,Nikto,Burp Suite,Sn1per,C
+74,Multiple Choice,"Which tool supports the entire web application testing process, from mapping to exploiting vulnerabilities?",Metasploit,Nikto,Burp Suite,Sn1per,C
 75,Multiple Choice,Which is a recommended countermeasure for Sensitive Data Exposure?,Generate encryption keys offline,Use weak algorithms for speed,Store session IDs in GET requests,Disable SSL,A
-76,Multiple Choice,To defend against SQL injection, developers should avoid building SQL statements directly from:,Stored procedures,User input,Binary data,Parameters,B
-77,Multiple Choice,In the Ruben scenario, which security misconfiguration was detected?,Improper error handling,Insufficient transport layer protection,Unvalidated inputs,Broken access control,A
+76,Multiple Choice,"To defend against SQL injection, developers should avoid building SQL statements directly from:",Stored procedures,User input,Binary data,Parameters,B
+77,Multiple Choice,"In the Ruben scenario, which security misconfiguration was detected?",Improper error handling,Insufficient transport layer protection,Unvalidated inputs,Broken access control,A
 78,Multiple Choice,What is the BSSID in wireless terminology?,The name of the network,The MAC address of an Access Point,The frequency band,The connection process,B
 79,Multiple Choice,Which spread spectrum method switches a carrier among many frequency channels?,DSSS,OFDM,FHSS,MIMO-OFDM,C
 80,Multiple Choice,Which IEEE amendment specifies security mechanisms for 802.11 networks?,802.11i,802.11b,802.16,802.11a,A
@@ -88,29 +88,29 @@ ID,Question_Type,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
 95,Multiple Choice,What is a best practice for wireless configuration regarding SSID?,Broadcast the SSID,Use SSID hiding (cloaking),Keep the default SSID,Use the SSID as a password,B
 96,Multiple Choice,Where should a firewall be placed for wireless security?,Behind the database,Between the AP and the corporate intranet,On the user's laptop,Outside the physical machine room,B
 97,Multiple Choice,Which tool is a ""centralized authentication and authorization management system""?,RADIUS,Burp Suite,WiMax,Sn1per,A
-98,Multiple Choice,In the Samson scenario, which vulnerability process was compromised?,SQL query validation,WPA2 four-way handshake,Bluetooth pairing,Error message handling,B
+98,Multiple Choice,"In the Samson scenario, which vulnerability process was compromised?",SQL query validation,WPA2 four-way handshake,Bluetooth pairing,Error message handling,B
 99,Multiple Choice,Which Aircrack-ng tool creates a client-to-AP relationship graph?,Airbase-ng,Airgraph-ng,Airtun-ng,Packetforge-ng,B
 100,Multiple Choice,What does ""MIMO-OFDM"" stand for in terms of application?,2G communications,4G and 5G broadband wireless,Wired LAN security,Bluetooth middleware,B
 101,Multiple Choice,Which Bluetooth threat involves terrorists sending false bomb threats?,Leakage of calendars,Sending SMS messages,Bugging devices,Causing financial losses,B
-102,Multiple Choice,To prevent web application attacks, non-SSL requests should be:,Dropped,Redirected to the SSL page,Logged but allowed,Handled by Layer 3,B
+102,Multiple Choice,"To prevent web application attacks, non-SSL requests should be:",Dropped,Redirected to the SSL page,Logged but allowed,Handled by Layer 3,B
 103,Multiple Choice,Which is NOT an injection type mentioned in the sources?,Command injection,LDAP injection,SQL injection,CSS injection,D
 104,Multiple Choice,Which wireless term describes the process of connecting a device to an AP?,Authentication,Association,Modulation,Sniffing,B
 105,Multiple Choice,What is the character limit for an SSID?,16,32,64,128,B
 106,Multiple Choice,Which vulnerability can lead to remote code execution and DoS via internal files?,A4 – XXE,A1 – Injection,A2 – Broken Authentication,A9 – Vulnerable components,A
 107,Multiple Choice,Which tool is used for automated scanning in web security?,Burp Suite,OWASP Zed Attack Proxy,Nikto,Metasploit,C
-108,Multiple Choice,To secure a database, testing teams should avoid constructing dynamic SQL with:,Prepared statements,Concatenated input values,Stored procedures,Multi-layer validation,B
+108,Multiple Choice,"To secure a database, testing teams should avoid constructing dynamic SQL with:",Prepared statements,Concatenated input values,Stored procedures,Multi-layer validation,B
 109,Multiple Choice,Which protocol encapsulates EAP within a TLS tunnel?,LEAP,PEAP,WEP,TKIP,B
 110,Multiple Choice,WPA3 authentication uses which integrity check mechanism?,BIP-GMAC-256,HMAC-MD5,MIC,SAE,A
 111,Multiple Choice,Which attack technique tricks users into connecting to a rogue AP by copying its SSID?,Misconfigured AP,Honeypot AP,Unauthorized association,Bluetooth sniffing,B
 112,Multiple Choice,Which wireless tool protects against denial-of-service and man-in-the-middle attacks?,Weevely,Astra,RFProtect,Mole,C
 113,Multiple Choice,What should be done with past paired Bluetooth devices?,Keep them for convenience,Regularly check and delete them,Share them with the network,Use them to store keys,B
-114,Multiple Choice,What is the frequency set for international industrial, scientific, and medical communities?,GSM,ISM band,SSID,5G,B
+114,Multiple Choice,"What is the frequency set for international industrial, scientific, and medical communities?",GSM,ISM band,SSID,5G,B
 115,Multiple Choice,Which protocol uses CCMP (an AES-based mode) for strong security?,WEP,WPA,WPA2,LEAP,C
-116,Multiple Choice,In wireless security, why should the network be disabled when not required?,To save battery,To defend against potential attacks,To clear the SSID,To reset the RADIUS server,B
+116,Multiple Choice,"In wireless security, why should the network be disabled when not required?",To save battery,To defend against potential attacks,To clear the SSID,To reset the RADIUS server,B
 117,Multiple Choice,Which attack allows hackers to remotely control a phone to make calls?,Bluebugging,Bluejacking,BluePrinting,Bluesmacking,A
 118,Multiple Choice,Which Aircrack-ng tool injects frames into a WPA TKIP network with QoS?,Airtun-ng,Tkiptun-ng,Aireplay-ng,WZCook,B
 121,True/False,SQL injection only involves inserting LDAP statements into user forms.,,,,F
-122,True/False,Broken Authentication functions include logout, timeouts, and password management.,,,,T
+122,True/False,"Broken Authentication functions include logout, timeouts, and password management.",,,,T
 123,True/False,Insufficient transport layer protection supports weak algorithms and expired certificates.,,,,T
 124,True/False,Most web applications run libraries and frameworks with minimum privileges.,,,,F
 125,True/False,Attackers often tamper with web application logs to hide their identities.,,,,T

@@ -1,5 +1,5 @@
 export const Storage = {
-    KEYS: { WRONG: 'quiz_wrong', STATS: 'quiz_stats', THEME: 'quiz_theme', AUDIO: 'quiz_audio', BOOKMARKS: 'quiz_bookmarks', PROG: 'quiz_prog', LEFTHAND: 'quiz_lefthand', QUIZ_COUNT: 'quiz_count' },
+    KEYS: { WRONG: 'quiz_wrong', STATS: 'quiz_stats', THEME: 'quiz_theme', AUDIO: 'quiz_audio', BOOKMARKS: 'quiz_bookmarks', PROG: 'quiz_prog', LEFTHAND: 'quiz_lefthand', QUIZ_COUNT: 'quiz_count', FONTTYPE: 'quiz_font_type' },
     get: (key, def) => {
         try {
             const val = localStorage.getItem(key);

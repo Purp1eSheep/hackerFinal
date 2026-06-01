@@ -1,5 +1,161 @@
 ﻿id,question,options,answer,topic
-V001,Vibe Coding 開發過程中，哪一樣東西的庫存最重要？,"[""GitHub 的 Star 數"", ""電腦的記憶體容量"", ""冰箱裡的可樂與紅牛"", ""腦袋裡的演算法知識""]",3,物資整備
-V002,如何在完全看不懂 code 的情況下進行 Code Review？,"[""逐行查字典理解變數名稱"", ""對著螢幕點頭並發出「嗯，這很 Vibe」的聲音"", ""叫 AI 寫一段總結，然後把它複製貼上"", ""直接按 Approve，相信 AI 的意志""]",4,職業素養
-V003,當 Claude 的額度用完，而你的 code 還是一堆 Bug 時，最優解是什麼？,"[""自己動手修（雖然看不懂）"", ""跪求 Gemini 接手並叫它「備胎 Daddy」"", ""直接刪庫跑路，假裝專案從沒存在過"", ""花錢買 Pro 會員（但你沒錢）""]",2,緊急應變
-V004,當你想要在 5 分鐘內噴出一個網頁，但你連 <div> 是什麼都不知道時，該怎麼辦？,"[""報名資工補習班從頭學起"", ""在 Threads 發文問有沒有大神能幫忙"", ""打開 Claude 並輸入「Yes Daddy, 幫我噴一個帥的」"", ""把自己反鎖在房間裡哭""]",3,生存心法
+Q009,"What is the most critical ""deadly mistake"" an ethical hacker can make before starting a test?","[""Not using Linux"", ""Not getting prior approval in writing"", ""Using free tools"", ""Not knowing how to code""]",2,道德駭客基礎與法規
+Q010,"When obtaining documented approval, what must be included?","[""A list of all passwords"", ""The hacker's home address"", ""The plan, schedule, and systems to test"", ""A guarantee to find all vulnerabilities""]",3,道德駭客基礎與法規
+Q011,Is it possible to find all vulnerabilities during a security test?,"[""Yes, if you use the right tools"", ""Yes, if you are a certified expert"", ""No, because so many known and unknown vulnerabilities exist"", ""No, because clients won't let you see everything""]",3,道德駭客基礎與法規
+Q012,"Regarding security vulnerabilities, which of the following is true?","[""100 percent, ironclad security is attainable"", ""Maintaining 100 percent security is not attainable"", ""One test is enough to eliminate all risks"", ""Patching and hardening systems is useless""]",2,道德駭客基礎與法規
+Q013,Why must ethical hacking tests be performed periodically?,"[""To charge the client more money"", ""Because new threats and vulnerabilities surface continually"", ""Because software never changes"", ""To practice using new tools""]",2,道德駭客基礎與法規
+Q014,"What does a """"good ethical hacker"""" know?","[""Everything about information security"", ""Their limitations and where to get answers"", ""Only how to use one specific tool"", ""How to bypass the law""]",2,道德駭客基礎與法規
+Q015,How should an ethical hacker view the target network?,"[""From a manager's viewpoint"", ""From a hacker's viewpoint"", ""Only from the internal network"", ""From a non-technical perspective""]",2,道德駭客基礎與法規
+Q016,Which systems should an ethical hacker focus on?,"[""Standalone desktops with no network card"", ""The most expensive hardware"", ""Systems and operations that matter most"", ""Only the oldest systems""]",3,道德駭客基礎與法規
+Q017,"What is a risk of """"pounding production systems"""" at the wrong time?","[""It might improve system performance"", ""It could take down critical systems at the worst moment"", ""Managers will be impressed by the speed"", ""It saves the company money""]",2,道德駭客基礎與法規
+Q018,"If you outsource security testing, what is your responsibility?","[""To stay involved throughout the entire process"", ""To hand over everything and forget about it"", ""To never talk to the third party"", ""To do the work yourself instead""]",1,道德駭客基礎與法規
+Q019,"Which term is defined as """"a test evaluating the strengths of all security controls""""?","[""Port Scanning"", ""Social Engineering"", ""Penetration Test"", ""Intelligence Gathering""]",3,滲透測試方法論
+Q020,Which compliance standard requires organizations to perform penetration tests at least once a year?,"[""HIPAA"", ""PCI-DSS"", ""CEH"", ""GPEN""]",2,滲透測試方法論
+Q021,Which viewpoint simulates threats originating from within the trusted network environment?,"[""External Attacker"", ""Internal/Malicious Employee"", ""Overt Testing"", ""Reconnaissance""]",2,滲透測試方法論
+Q022,"What is an advantage of """"Overt Penetration Testing""""?","[""It tests active incident response"", ""Access to insider organizational knowledge"", ""It is the most realistic simulation"", ""It is performed without the IT team's knowledge""]",2,滲透測試方法論
+Q023,"What is a disadvantage of """"Covert Penetration Testing""""?","[""It provides full access without blocks"", ""It is costly and time-consuming"", ""It does not test incident response"", ""It uses too many tools""]",2,滲透測試方法論
+Q024,"What is the purpose of the """"Reconnaissance"""" phase?","[""To exploit vulnerabilities"", ""To discover as much information about a target as possible without network contact"", ""To write the final report"", ""To crash the target's server""]",2,資訊蒐集與 WHOIS
+Q025,Which tool is used for discovering organization info via WHOIS?,"[""Nmap"", ""Nessus"", ""whois"", ""Medusa""]",3,資訊蒐集與 WHOIS
+Q026,"What is the purpose of """"Network Enumeration and Scanning""""?","[""To steal credit card data"", ""To discover existing networks, live hosts, and services"", ""To encrypt the final report"", ""To hire a hacker""]",2,資訊蒐集與 WHOIS
+Q027,Which command is used in Nmap to perform a scan?,"[""ifconfig -a"", ""apt-get update"", ""nmap -sS [IP address]"", ""whois target_domain""]",3,資訊蒐集與 WHOIS
+Q028,"Which tool is primarily used for """"Remote vulnerability scanning""""?","[""HTTrack"", ""Nessus"", ""Google Search"", ""theHarvester""]",2,漏洞掃描與評估
+Q029,"In the reporting phase, vulnerabilities should be:","[""Listed alphabetically"", ""Prioritized"", ""Hidden from the manager"", ""Written in highly technical jargon""]",2,漏洞掃描與評估
+Q030,"When e-mailing the final report, what must you do?","[""Use a public cloud link"", ""Encrypt all attachments"", ""Send it to the entire company"", ""Keep it in plain text""]",2,漏洞掃描與評估
+Q031,What should be removed from the final report to prevent malicious use by others?,"[""The dates of testing"", ""Recommendations for improvement"", ""Specific tools used and actual testing steps"", ""The summary of vulnerabilities""]",3,MITRE ATT&CK 框架
+Q032,Which certification is specifically mentioned as one for penetration testers?,"[""Microsoft Word Expert"", ""Certified Ethical Hacker (CEH)"", ""Adobe Certified Professional"", ""PMP""]",2,MITRE ATT&CK 框架
+Q033,"Which tool is used for """"Discovering and Leveraging E-mail Addresses""""?","[""theHarvester"", ""Wireshark"", ""Netcat"", ""Cain & Abel""]",1,MITRE ATT&CK 框架
+Q034,"Which command is used to bring a network interface """"up"""" in Linux?","[""poweroff"", ""ifconfig eth0 up"", ""apt-get install"", ""dig @target_ip""]",2,資訊蒐集與 WHOIS
+Q035,"What is the purpose of """"Vulnerability Testing and Exploitation""""?","[""To gather contact emails"", ""To check hosts for known vulnerabilities and assess severity"", ""To set up a WHOIS server"", ""To practice typing""]",2,漏洞掃描與評估
+Q036,"According to Table 16-1, ""Sensitive information stored on an unencrypted laptop"" is considered:","[""High Likelihood / High Impact"", ""Low Likelihood / Low Impact"", ""Medium Likelihood / High Impact"", ""High Likelihood / Low Impact""]",1,漏洞掃描與評估
+Q037,"Which phase involves organizing information by hosts, services, and identified hazards?","[""Exploitation"", ""Reconnaissance"", ""Reporting"", ""Scanning""]",3,漏洞掃描與評估
+Q038,What mindset must organizations employ to survive modern threats?,"[""A defensive-only mindset"", ""A hacker mindset"", ""A bureaucratic mindset"", ""A profit-only mindset""]",2,MITRE ATT&CK 框架
+Q039,"In MITRE ATT&CK, what term describes what an attacker wants to achieve?","[""Procedure"", ""Technique"", ""Tactic"", ""ID""]",3,MITRE ATT&CK 框架
+Q040,What is the primary purpose of a Fake WAP (Fake Wireless Access Point)?,"[""Increase network bandwidth"", ""Conduct Man-in-the-Middle (MITM) attacks or steal credentials"", ""Encrypt user data"", ""Improve server performance""]",2,假無線 AP 與中間人攻擊
+Q041,Which MITRE Technique ID corresponds to Phishing?,"[""T1040"", ""T1190"", ""T1566"", ""T1078""]",3,社交工程與釣魚
+Q042,An attacker uses credentials leaked from one website to attempt logins on other platforms. What type of attack is this?,"[""SQL Injection"", ""Credential Reuse"", ""Browser Hijacker"", ""Bait and Switch""]",2,憑證重用與防禦
+Q043,SQL Injection primarily exploits which weakness?,"[""Unstable network connections"", ""Weak user passwords"", ""Failure to properly validate or sanitize input data"", ""Too many browser plugins""]",3,SQL 注入與防禦
+Q044,Which measure is most appropriate for preventing Session Hijacking?,"[""Use HTTPS and HttpOnly Cookies"", ""Install an ad blocker"", ""Download software only from official websites"", ""Change desktop wallpapers regularly""]",1,會話劫持與傳輸加密
+Q045,"In the MITRE ATT&CK framework, what describes what an attacker specifically did in a real-world case?","[""Tactic"", ""Technique"", ""Procedure"", ""Mitigation""]",3,MITRE ATT&CK 框架
+Q046,Fake WAP attacks are most likely to occur in which environment?,"[""Private home offices"", ""Public places such as airports and coffee shops"", ""Inside data centers"", ""Offline environments""]",2,假無線 AP 與中間人攻擊
+Q047,Which tool is commonly used to create a Fake WAP for testing or attacks?,"[""SQLmap"", ""WiFi-Pumpkin"", ""Wireshark"", ""Metasploit""]",2,假無線 AP 與中間人攻擊
+Q048,How does a Bait and Switch attack typically work?,"[""Directly brute-force passwords"", ""Display a legitimate link first, then redirect users to malicious content"", ""Steal session cookies"", ""Attack a database backend""]",2,社交工程與釣魚
+Q049,Which is a recommended defense against SQL Injection?,"[""Use a VPN"", ""Use Parameterized Queries"", ""Enable MFA"", ""Review email logs""]",2,SQL 注入與防禦
+Q050,"When an attacker positions themselves between two communicating parties to sniff or modify data, what is this called in MITRE?","[""Adversary-in-the-Middle (T1557)"", ""Valid Accounts"", ""Phishing"", ""Boot or Logon Initialization""]",1,MITRE ATT&CK 框架
+Q051,What is a common symptom of a Browser Hijacker?,"[""The computer shuts down automatically"", ""The homepage or search engine is changed to a malicious website"", ""Hard drive data is encrypted"", ""Screen resolution decreases""]",2,瀏覽器劫持與惡意擴充
+Q052,"In MITRE ATT&CK, Initial Access belongs to which category?","[""Technique"", ""Procedure"", ""Tactic"", ""Mitigation""]",3,MITRE ATT&CK 框架
+Q053,Which data source is most useful for detecting attackers using Valid Accounts?,"[""Browser settings"", ""Login logs or anomalous IP records"", ""SQL query syntax"", ""Ad-blocking records""]",2,憑證重用與防禦
+Q054,What is the best recommendation for preventing Credential Reuse?,"[""Use a VPN"", ""Use a password manager and enable MFA"", ""Install antivirus software"", ""Avoid public Wi-Fi""]",2,憑證重用與防禦
+Q055,"During Session Hijacking, what information is typically stolen?","[""The user's physical hardware"", ""Session Cookie or Session ID"", ""The user's BIOS password"", ""The router's SSID""]",2,會話劫持與傳輸加密
+Q056,Exploit Public-Facing Application (T1190) is commonly associated with which attack method?,"[""SQL Injection"", ""Phishing"", ""Fake WAP"", ""Browser Hijacker""]",1,SQL 注入與防禦
+Q057,What is the primary purpose of the MITRE ATT&CK framework?,"[""Transform unstructured security incidents into structured attack behavior analysis"", ""Used only for data backup"", ""Replace all firewalls"", ""Specifically for software development""]",1,OWASP 網頁弱點與防禦
+Q058,Which attack belongs to the category of Social Engineering?,"[""MAC Spoofing"", ""Watering Hole Attack"", ""ARP Spoofing"", ""DoS""]",2,OWASP 網頁弱點與防禦
+Q059,Which of the following application security risks occurs when untrusted data is sent to an interpreter as part of a command or query? (OWASP),"[""A6 – security misconfiguration"", ""A3 – Sensitive data exposure"", ""A1 – injection"", ""A4 – XML external entity (XXE)""]",3,OWASP 網頁弱點與防禦
+Q060,Which of the following security risks can disclose internal files using the file URI handler remote code execution and DoS attacks such as the billion laughs attack?,"[""XML external entity (XXE)"", ""Command injection"", ""Broken authentication"", ""Cross-site scripting (XSS)""]",1,OWASP 網頁弱點與防禦
+Q061,Which of the following practices is NOT a countermeasure to defend against web server attacks?,"[""Physically protect the machine"", ""Install IIS server on a domain controller"", ""Store website files on a separate drive"", ""Screen and filter incoming traffic""]",2,OWASP 網頁弱點與防禦
+Q062,In which layer of the vulnerability stack do security professionals configure solutions such as IDS and IPS?,"[""Layer 3"", ""Layer 5"", ""Layer 7"", ""Layer 1""]",1,OWASP 網頁弱點與防禦
+Q063,Identify the type of SQL injection technique used by the attacker when they cannot directly exploit any other techniques.,"[""In-band SQL injection"", ""Error-based SQL injection"", ""Blind SQL injection"", ""Out-of-band SQL injection""]",3,OWASP 網頁弱點與防禦
+Q064,Which of the following terms is a spread spectrum technique that multiplies the original data signal with a pseudo-random noise-spreading code?,"[""ISM band"", ""BSSID"", ""SSID"", ""DSSS""]",4,頻譜與寬頻無線技術
+Q065,Identify the IEEE 802.16 standard.,"[""Wi-Fi"", ""WiMax"", ""ZigBee"", ""Bluetooth""]",2,頻譜與寬頻無線技術
+Q066,In which of the following attacks does an attacker create a soft AP on a laptop to make the laptop’s NIC appear as a legitimate AP?,"[""Ad-hoc connection"", ""Honeypot AP"", ""Unauthorized association"", ""AP MAC spoofing""]",2,頻譜與寬頻無線技術
+Q067,Identify the protocol that uses AES-GCMP 256 encryption and ECDH/ECDSA key management.,"[""WEP"", ""WPA3"", ""WPA"", ""WPA2""]",2,Wi-Fi 安全與加密協定
+Q068,Which mode of operation is responsible for Delivering password-based authentication using the SAE protocol?,"[""WPA3-Personal"", ""WPA3-Enterprise"", ""WPA2-Enterprise"", ""WPA2-Personal""]",1,Wi-Fi 安全與加密協定
+Q069,"What is the rank of """"Broken Access Control"""" in OWASP Top 10 (2021)?","[""#3"", ""#5"", ""#1"", ""#10""]",3,OWASP 網頁弱點與防禦
+Q070,Which vulnerability involves exploiting authentication or session management functions to impersonate users?,"[""Injection"", ""Broken Authentication"", ""XXE"", ""XSS""]",2,OWASP 網頁弱點與防禦
+Q071,"""Parameter tampering"" is used to modify application data between which two entities?","[""Database and Server"", ""Client and Server"", ""Router and AP"", ""OS and Kernel""]",2,OWASP 網頁弱點與防禦
+Q072,"According to the sources, why are vulnerable components dangerous?","[""They have no encryption"", ""They often run with full privileges"", ""They are only found on Windows"", ""They slow down the network""]",2,OWASP 網頁弱點與防禦
+Q073,"What does """"Insufficient logging and monitoring"""" refer to?","[""Recording too much data"", ""Detection software ignoring important event details"", ""Using weak passwords"", ""Not having a firewall""]",2,OWASP 網頁弱點與防禦
+Q074,"Which tool supports the entire web application testing process, from mapping to exploiting vulnerabilities?","[""Metasploit"", ""Nikto"", ""Burp Suite"", ""Sn1per""]",3,OWASP 網頁弱點與防禦
+Q075,Which is a recommended countermeasure for Sensitive Data Exposure?,"[""Generate encryption keys offline"", ""Use weak algorithms for speed"", ""Store session IDs in GET requests"", ""Disable SSL""]",1,OWASP 網頁弱點與防禦
+Q076,"To defend against SQL injection, developers should avoid building SQL statements directly from:","[""Stored procedures"", ""User input"", ""Binary data"", ""Parameters""]",2,OWASP 網頁弱點與防禦
+Q077,"In the Ruben scenario, which security misconfiguration was detected?","[""Improper error handling"", ""Insufficient transport layer protection"", ""Unvalidated inputs"", ""Broken access control""]",1,OWASP 網頁弱點與防禦
+Q078,What is the BSSID in wireless terminology?,"[""The name of the network"", ""The MAC address of an Access Point"", ""The frequency band"", ""The connection process""]",2,Wi-Fi 安全與加密協定
+Q079,Which spread spectrum method switches a carrier among many frequency channels?,"[""DSSS"", ""OFDM"", ""FHSS"", ""MIMO-OFDM""]",3,Wi-Fi 安全與加密協定
+Q080,Which IEEE amendment specifies security mechanisms for 802.11 networks?,"[""802.11i"", ""802.11b"", ""802.16"", ""802.11a""]",1,藍牙安全性與漏洞
+Q081,Which encryption algorithm uses a 24-bit Initialization Vector (IV)?,"[""WPA2"", ""AES"", ""WEP"", ""TKIP""]",3,藍牙安全性與漏洞
+Q082,What does WPA2 integrate for centralized client authentication?,"[""PSK"", ""EAP or RADIUS"", ""SSID"", ""SAE""]",2,Wi-Fi 安全與加密協定
+Q083,Which protocol serves as the replacement for WEP in WPA?,"[""AES"", ""TKIP"", ""CCMP"", ""GCMP""]",2,Wi-Fi 安全與加密協定
+Q084,WPA3-Personal uses which protocol for key exchange?,"[""TKIP"", ""MIC"", ""Dragonfly"", ""Kerberos""]",3,Wi-Fi 安全與加密協定
+Q085,"A """"Soft AP"""" attack allows an unauthorized connection to which entity?","[""The Internet"", ""The Enterprise network"", ""A Bluetooth headset"", ""A specific website""]",2,Wi-Fi 安全與加密協定
+Q086,"The """"billion laughs attack"""" is associated with which vulnerability?","[""SQLi"", ""XXE"", ""SSRF"", ""XSS""]",2,OWASP 網頁弱點與防禦
+Q087,"What is the goal of """"BluePrinting"""" in Bluetooth attacks?","[""Crashing the device"", ""Collecting information about manufacturer and firmware"", ""Stealing documents"", ""Modifying data""]",2,藍牙安全性與漏洞
+Q088,Which Bluetooth attack involves sending unsolicited messages?,"[""Bluesmacking"", ""Bluejacking"", ""Bluesnarfing"", ""Bluebugging""]",2,藍牙安全性與漏洞
+Q089,The theft of information through a Bluetooth connection is called:,"[""Bluejacking"", ""Bluesnarfing"", ""BlueSniff"", ""Bluebugging""]",2,藍牙安全性與漏洞
+Q090,Which attack overflows Bluetooth devices with random packets to cause a crash?,"[""Bluesmacking"", ""Bluejacking"", ""Bluebugging"", ""KNOB attack""]",1,藍牙安全性與漏洞
+Q091,Which Aircrack-ng tool is used to enable monitor mode on wireless interfaces?,"[""Aircrack-ng"", ""Airmon-ng"", ""Airodump-ng"", ""Aireplay-ng""]",2,無線網路稽核與工具
+Q092,Which tool is used to decrypt WEP/WPA packets and strip wireless headers?,"[""Airtun-ng"", ""Easside-ng"", ""Airdecap-ng"", ""Airgraph-ng""]",3,無線網路稽核與工具
+Q093,The KNOB attack exploits a vulnerability in Bluetooth to perform:,"[""Denial of Service"", ""Eavesdropping on shared data"", ""Remote control"", ""MAC spoofing""]",2,藍牙安全性與漏洞
+Q094,Which Bluetooth mode rejects every pairing request?,"[""Discoverable"", ""Non-pairable"", ""Pairable"", ""Limited discoverable""]",2,藍牙安全性與漏洞
+Q095,What is a best practice for wireless configuration regarding SSID?,"[""Broadcast the SSID"", ""Use SSID hiding (cloaking)"", ""Keep the default SSID"", ""Use the SSID as a password""]",2,Wi-Fi 安全與加密協定
+Q096,Where should a firewall be placed for wireless security?,"[""Behind the database"", ""Between the AP and the corporate intranet"", ""On the user's laptop"", ""Outside the physical machine room""]",2,Wi-Fi 安全與加密協定
+Q097,"Which tool is a """"centralized authentication and authorization management system""""?","[""RADIUS"", ""Burp Suite"", ""WiMax"", ""Sn1per""]",1,Wi-Fi 安全與加密協定
+Q098,"In the Samson scenario, which vulnerability process was compromised?","[""SQL query validation"", ""WPA2 four-way handshake"", ""Bluetooth pairing"", ""Error message handling""]",2,無線網路稽核與工具
+Q099,Which Aircrack-ng tool creates a client-to-AP relationship graph?,"[""Airbase-ng"", ""Airgraph-ng"", ""Airtun-ng"", ""Packetforge-ng""]",2,無線網路稽核與工具
+Q100,"What does """"MIMO-OFDM"""" stand for in terms of application?","[""2G communications"", ""4G and 5G broadband wireless"", ""Wired LAN security"", ""Bluetooth middleware""]",2,無線網路稽核與工具
+Q101,Which Bluetooth threat involves terrorists sending false bomb threats?,"[""Leakage of calendars"", ""Sending SMS messages"", ""Bugging devices"", ""Causing financial losses""]",2,OWASP 網頁弱點與防禦
+Q102,"To prevent web application attacks, non-SSL requests should be:","[""Dropped"", ""Redirected to the SSL page"", ""Logged but allowed"", ""Handled by Layer 3""]",2,OWASP 網頁弱點與防禦
+Q103,Which is NOT an injection type mentioned in the sources?,"[""Command injection"", ""LDAP injection"", ""SQL injection"", ""CSS injection""]",4,OWASP 網頁弱點與防禦
+Q104,Which wireless term describes the process of connecting a device to an AP?,"[""Authentication"", ""Association"", ""Modulation"", ""Sniffing""]",2,Wi-Fi 安全與加密協定
+Q105,What is the character limit for an SSID?,"[""16"", ""32"", ""64"", ""128""]",2,Wi-Fi 安全與加密協定
+Q106,Which vulnerability can lead to remote code execution and DoS via internal files?,"[""A4 – XXE"", ""A1 – Injection"", ""A2 – Broken Authentication"", ""A9 – Vulnerable components""]",1,OWASP 網頁弱點與防禦
+Q107,Which tool is used for automated scanning in web security?,"[""Burp Suite"", ""OWASP Zed Attack Proxy"", ""Nikto"", ""Metasploit""]",3,OWASP 網頁弱點與防禦
+Q108,"To secure a database, testing teams should avoid constructing dynamic SQL with:","[""Prepared statements"", ""Concatenated input values"", ""Stored procedures"", ""Multi-layer validation""]",2,OWASP 網頁弱點與防禦
+Q109,Which protocol encapsulates EAP within a TLS tunnel?,"[""LEAP"", ""PEAP"", ""WEP"", ""TKIP""]",2,Wi-Fi 安全與加密協定
+Q110,WPA3 authentication uses which integrity check mechanism?,"[""BIP-GMAC-256"", ""HMAC-MD5"", ""MIC"", ""SAE""]",1,Wi-Fi 安全與加密協定
+Q111,Which attack technique tricks users into connecting to a rogue AP by copying its SSID?,"[""Misconfigured AP"", ""Honeypot AP"", ""Unauthorized association"", ""Bluetooth sniffing""]",2,無線網路稽核與工具
+Q112,Which wireless tool protects against denial-of-service and man-in-the-middle attacks?,"[""Weevely"", ""Astra"", ""RFProtect"", ""Mole""]",3,無線網路稽核與工具
+Q113,What should be done with past paired Bluetooth devices?,"[""Keep them for convenience"", ""Regularly check and delete them"", ""Share them with the network"", ""Use them to store keys""]",2,藍牙安全性與漏洞
+Q114,"What is the frequency set for international industrial, scientific, and medical communities?","[""GSM"", ""ISM band"", ""SSID"", ""5G""]",2,Wi-Fi 安全與加密協定
+Q115,Which protocol uses CCMP (an AES-based mode) for strong security?,"[""WEP"", ""WPA"", ""WPA2"", ""LEAP""]",3,Wi-Fi 安全與加密協定
+Q116,"In wireless security, why should the network be disabled when not required?","[""To save battery"", ""To defend against potential attacks"", ""To clear the SSID"", ""To reset the RADIUS server""]",2,Wi-Fi 安全與加密協定
+Q117,Which attack allows hackers to remotely control a phone to make calls?,"[""Bluebugging"", ""Bluejacking"", ""BluePrinting"", ""Bluesmacking""]",1,藍牙安全性與漏洞
+Q118,Which Aircrack-ng tool injects frames into a WPA TKIP network with QoS?,"[""Airtun-ng"", ""Tkiptun-ng"", ""Aireplay-ng"", ""WZCook""]",2,無線網路稽核與工具
+Q121,SQL injection only involves inserting LDAP statements into user forms.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q122,"Broken Authentication functions include logout, timeouts, and password management.","[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q123,Insufficient transport layer protection supports weak algorithms and expired certificates.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q124,Most web applications run libraries and frameworks with minimum privileges.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q125,Attackers often tamper with web application logs to hide their identities.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q126,Burp Suite can find and exploit security vulnerabilities in web applications.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q127,Session data should be submitted as part of a GET or POST request for security.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q128,Setup roles and accounts should include disabling all default accounts.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q129,Storing website files on the OS drive is a recommended security countermeasure.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q130,DSSS spreads a signal over a wider frequency band to protect against interference.,"[""True"", ""False""]",2,頻譜與寬頻無線技術
+Q131,IEEE 802.16 is also known as WiMax.,"[""True"", ""False""]",2,頻譜與寬頻無線技術
+Q132,WEP is more secure than WPA2 because it uses a 24-bit IV.,"[""True"", ""False""]",2,Wi-Fi 安全與加密協定
+Q133,AES is a symmetric-key encryption used in WPA2.,"[""True"", ""False""]",2,Wi-Fi 安全與加密協定
+Q134,WPA3 uses GCMP-256 for encryption and HMAC-SHA-384 for authentication.,"[""True"", ""False""]",2,Wi-Fi 安全與加密協定
+Q135,Bluetooth hacking refers to exploiting the physical layer hardware only.,"[""True"", ""False""]",2,藍牙安全性與漏洞
+Q136,Bluesmacking is a DoS attack that overflows devices with random packets.,"[""True"", ""False""]",2,藍牙安全性與漏洞
+Q137,Non-discoverable Bluetooth mode does not mean it is 100% immune to attacks.,"[""True"", ""False""]",2,藍牙安全性與漏洞
+Q138,Bluetooth should be kept in the enabled state at all times for maximum security.,"[""True"", ""False""]",2,藍牙安全性與漏洞
+Q139,SSID broadcasting is considered a misconfiguration that allows SSID theft.,"[""True"", ""False""]",2,Wi-Fi 安全與加密協定
+Q140,Airmon-ng is used to capture WPA/WPA2 handshakes.,"[""True"", ""False""]",2,無線網路稽核與工具
+Q141,"Tactic refers to how an attacker carries out a goal, such as Phishing.","[""True"", ""False""]",2,MITRE ATT&CK 框架
+Q142,Fake WAP can be mapped to Network Sniffing (T1040) in MITRE ATT&CK.,"[""True"", ""False""]",2,假無線 AP 與中間人攻擊
+Q143,SQL Injection usually occurs because a system fails to properly validate or filter user input.,"[""True"", ""False""]",2,SQL 注入與防禦
+Q144,Credential Reuse is mainly caused by system vulnerabilities and is unrelated to users choosing convenience.,"[""True"", ""False""]",2,憑證重用與防禦
+Q145,MFA (Multi-Factor Authentication) is an effective mitigation against credential theft.,"[""True"", ""False""]",2,憑證重用與防禦
+Q146,Browser Hijackers may enter a system through unsafe browser extensions.,"[""True"", ""False""]",2,瀏覽器劫持與惡意擴充
+Q147,An attacker must know the user's password to perform Session Hijacking.,"[""True"", ""False""]",2,會話劫持與傳輸加密
+Q148,Bait and Switch attacks are commonly associated with User Execution (T1204) in MITRE.,"[""True"", ""False""]",2,社交工程與釣魚
+Q149,Using a VPN can help prevent traffic interception on public Wi-Fi networks.,"[""True"", ""False""]",2,會話劫持與傳輸加密
+Q150,Technique refers to the specific real-world operational steps performed by an attacker.,"[""True"", ""False""]",2,MITRE ATT&CK 框架
+Q151,HTTPS helps protect data in transit and reduces the risk of Man-in-the-Middle attacks.,"[""True"", ""False""]",2,會話劫持與傳輸加密
+Q152,MITRE ATT&CK only contains attack matrices for Windows systems.,"[""True"", ""False""]",2,MITRE ATT&CK 框架
+Q153,Credential Stuffing (T1110.004) refers to using leaked credentials to attempt logins across multiple services.,"[""True"", ""False""]",2,憑證重用與防禦
+Q154,One way to prevent Browser Hijackers is to download browser extensions only from third-party software packages.,"[""True"", ""False""]",2,瀏覽器劫持與惡意擴充
+Q155,SQL Injection can be used to bypass login pages and read or delete database records,"[""True"", ""False""]",2,SQL 注入與防禦
+Q156,Adversary-in-the-Middle describes an attacker positioning themselves between two communicating parties.,"[""True"", ""False""]",2,假無線 AP 與中間人攻擊
+Q157,Initial Access is the first Tactic used by attackers to enter a network.,"[""True"", ""False""]",2,MITRE ATT&CK 框架
+Q158,Airbase-ng is a tool specifically designed to repair SQL databases.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
+Q159,Network Sniffing refers to the capture of network traffic to obtain sensitive information.,"[""True"", ""False""]",2,憑證重用與防禦
+Q160,Understanding an attacker's Tactic (objective) helps analysts connect evidence to appropriate mitigations.,"[""True"", ""False""]",2,MITRE ATT&CK 框架
+Q161,100 percent,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q162,You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q163,Ethical hacking is a one-time event that does not need to be repeated.,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q164,"Penetration Testing evaluates procedural, operational, and technological controls.","[""True"", ""False""]",2,滲透測試方法論
+Q165,Overt Penetration Testing is performed without the knowledge of the IT department.,"[""True"", ""False""]",2,滲透測試方法論
+Q166,Covert Penetration Testing most closely simulates a true adversarial attack.,"[""True"", ""False""]",2,滲透測試方法論
+Q167,The purpose of WHOIS is to exploit the target's database directly.,"[""True"", ""False""]",2,資訊蒐集與 WHOIS
+Q168,Password cracking and network analyzers should generally be removed from the final report to prevent abuse.,"[""True"", ""False""]",2,漏洞掃描與評估
+Q169,HIPAA compliance only requires organizations to perform tests once every ten years.,"[""True"", ""False""]",2,漏洞掃描與評估
+Q170,Mastery of Linux network interfaces is required before launching many security tools.,"[""True"", ""False""]",2,漏洞掃描與評估

@@ -1,6 +1,6 @@
 ID,Question,Correct_Answer
 121,SQL injection only involves inserting LDAP statements into user forms.,F
-122,Broken Authentication functions include logout, timeouts, and password management.,T
+122,"Broken Authentication functions include logout, timeouts, and password management.",T
 123,Insufficient transport layer protection supports weak algorithms and expired certificates.,T
 124,Most web applications run libraries and frameworks with minimum privileges.,F
 125,Attackers often tamper with web application logs to hide their identities.,T
@@ -39,7 +39,7 @@ ID,Question,Correct_Answer
 158,Airbase-ng is a tool specifically designed to repair SQL databases.,F
 159,Network Sniffing refers to the capture of network traffic to obtain sensitive information.,T
 160,"Understanding an attacker's Tactic (objective) helps analysts connect evidence to appropriate mitigations.",T
-161,100 percent, ironclad security is easily attainable if you have a large budget.,F
+161,"100 percent, ironclad security is easily attainable if you have a large budget.",F
 162,You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.,T
 163,Ethical hacking is a one-time event that does not need to be repeated.,F
 164,"Penetration Testing evaluates procedural, operational, and technological controls.",T

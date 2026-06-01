@@ -1,10 +1,11 @@
 :root {
-    --bg: #0f1117; --surface: #1a1d27; --surface2: #23263a;
-    --border: #2d3148; --accent: #7c6dfa; --accent-soft: rgba(124,109,250,.15);
-    --text: #e8eaf0; --muted: #7a7e9a; --correct: #4caf87;
-    --correct-soft: rgba(76,175,135,.15); --wrong: #e05c6e;
-    --wrong-soft: rgba(224,92,110,.15); --radius: 14px;
-    --transition: .2s ease; --theme-desc-color: #ffffff;
+    --bg: #090b0e; --surface: #10141a; --surface2: #171d26;
+    --border: #1e2630; --accent: #10b981; --accent-soft: rgba(16, 185, 129, 0.1);
+    --text: #e2e8f0; --muted: #64748b; --correct: #10b981;
+    --correct-soft: rgba(16, 185, 129, 0.12); --wrong: #ef4444;
+    --wrong-soft: rgba(239, 68, 68, 0.12); --radius: 12px;
+    --transition: .25s ease-in-out; --theme-desc-color: #10b981;
+    --font: 'Google Sans Code', 'Fira Code', 'Courier New', Courier, monospace;
 }
 [data-theme="light"] {
     --bg: #f4f5f7; --surface: #ffffff; --surface2: #eef0f5;
@@ -12,6 +13,7 @@
     --text: #1f2937; --muted: #6b7280; --correct: #059669;
     --correct-soft: rgba(5,150,105,.1); --wrong: #dc2626;
     --wrong-soft: rgba(220,38,38,.1); --theme-desc-color: #000000;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 [data-theme="ocean"] {
     --bg: #0a192f; --surface: #112240; --surface2: #1d2d50;
@@ -19,6 +21,7 @@
     --text: #ccd6f6; --muted: #8892b0; --correct: #10b981;
     --correct-soft: rgba(16,185,129,.1); --wrong: #f43f5e;
     --wrong-soft: rgba(244,63,94,.1); --theme-desc-color: #64ffda;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 [data-theme="forest"] {
     --bg: #1b261e; --surface: #253329; --surface2: #2f4234;
@@ -26,6 +29,7 @@
     --text: #e8f5e9; --muted: #a5d6a7; --correct: #66bb6a;
     --correct-soft: rgba(102,187,106,.1); --wrong: #ff8a65;
     --wrong-soft: rgba(255,138,101,.1); --theme-desc-color: #81c784;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 [data-theme="sunset"] {
     --bg: #2d1b2e; --surface: #3d243e; --surface2: #4d2d4e;
@@ -33,6 +37,7 @@
     --text: #fff3e0; --muted: #ffe0b2; --correct: #81c784;
     --correct-soft: rgba(129,199,132,.1); --wrong: #e57373;
     --wrong-soft: rgba(229,115,115,.1); --theme-desc-color: #ffb74d;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 [data-theme="sakura"] {
     --bg: #2d1b24; --surface: #3d2431; --surface2: #4d2d3e;
@@ -40,6 +45,7 @@
     --text: #fce4ec; --muted: #f8bbd0; --correct: #81c784;
     --correct-soft: rgba(129,199,132,.1); --wrong: #e57373;
     --wrong-soft: rgba(229,115,115,.1); --theme-desc-color: #f48fb1;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 [data-theme="nord"] {
     --bg: #242933; --surface: #2e3440; --surface2: #3b4252;
@@ -47,6 +53,7 @@
     --text: #d8dee9; --muted: #9ba3b2; --correct: #8fbcbb;
     --correct-soft: rgba(143,188,187,.1); --wrong: #bf616a;
     --wrong-soft: rgba(191,97,106,.1); --theme-desc-color: #81a1c1;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 /* 東京之夜 - 極深藍灰，柔和冷色調 */
 /* 炭黑柔和 - 專業級深色，實色且不刺眼 */
@@ -56,6 +63,7 @@
     --text: #d1d1d6; --muted: #8e8e93; --correct: #81b99a;
     --correct-soft: #1a231e; --wrong: #d68181;
     --wrong-soft: #231a1a; --theme-desc-color: #939aff;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 /* 暮光藍 - 紮實的深藍灰，穩定且沈穩 */
 [data-theme="twilight"] {
@@ -64,6 +72,7 @@
     --text: #d0d4dd; --muted: #8a919f; --correct: #97b397;
     --correct-soft: #1d261d; --wrong: #b39797;
     --wrong-soft: #261d1d; --theme-desc-color: #8ea4cc;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 /* 灰紫調 - 柔和的石板紫，不發光、不刺眼 */
 [data-theme="slate-purple"] {
@@ -72,10 +81,19 @@
     --text: #d5d0db; --muted: #938a94; --correct: #a3c1ad;
     --correct-soft: #1d261d; --wrong: #c1a3a3;
     --wrong-soft: #261d1d; --theme-desc-color: #b2a3c1;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+[data-font-type="mono"] {
+    --font: 'Google Sans Code', 'Fira Code', 'Courier New', Courier, monospace !important;
+}
+[data-font-type="sans"] {
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
 }
 
 /* 基礎樣式重置與共用類別 */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+input, select, textarea, button { font-family: inherit; }
 
 /* 自定義捲動軸 (Webkit: Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
@@ -102,7 +120,7 @@
 
 body {
     background: var(--bg); color: var(--text);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: var(--font), sans-serif;
     min-height: 100vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; padding: 24px 16px;
     transition: background var(--transition), color var(--transition);
@@ -251,11 +269,17 @@ p { color: var(--muted); font-size: .95rem; line-height: 1.6; }
 .badge-secondary { background: var(--surface2); color: var(--muted); margin-left: 8px; }
 
 .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.options.tf-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 576px) {
+    .options.tf-layout { grid-template-columns: 1fr; gap: 10px; }
+}
 .option { background: var(--surface2); border: 2px solid var(--border); border-radius: 10px; padding: 14px 18px; cursor: pointer; display: flex; align-items: center; gap: 14px; user-select: none; transition: var(--transition); }
 .option:hover:not(.locked) { border-color: var(--accent); }
 .option.selected { border-color: var(--accent); background: var(--accent-soft); }
 .option.correct { border-color: var(--correct); background: var(--correct-soft); }
 .option.wrong { border-color: var(--wrong); background: var(--wrong-soft); }
+
+
 .option-key { width: 28px; height: 28px; border-radius: 7px; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: .78rem; font-weight: 700; flex-shrink: 0; transition: var(--transition); }
 .option.selected .option-key { background: var(--accent); color: #fff; }
 .option.correct .option-key { background: var(--correct); color: #fff; }

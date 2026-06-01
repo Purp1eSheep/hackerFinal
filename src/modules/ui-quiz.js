@@ -46,6 +46,19 @@ export const UIQuiz = {
         const meta = q.id;
         document.getElementById('type-badge').textContent = meta;
         document.getElementById('type-badge').className = `badge badge-primary ${!meta ? 'hidden' : ''}`;
+        
+        const isTF = q.options.length === 2 && q.options[0] === 'True' && q.options[1] === 'False';
+        const qtypeBadge = document.getElementById('qtype-badge');
+        if (qtypeBadge) {
+            qtypeBadge.textContent = isTF ? '是非題' : '選擇題';
+        }
+        
+        if (isTF) {
+            DOM.optionsWrap.classList.add('tf-layout');
+        } else {
+            DOM.optionsWrap.classList.remove('tf-layout');
+        }
+
         document.getElementById('topic-badge').textContent = q.topic;
         DOM.qText.innerHTML = Utils.formatText(q.question);
         DOM.expWrap.innerHTML = '';
@@ -61,7 +74,11 @@ export const UIQuiz = {
                 if (ansData.selected.includes(i) && !ansData.correct.includes(i)) cls += ' wrong';
                 if (ansData.selected.includes(i) && ansData.correct.includes(i)) cls += ' selected';
             }
-            return `<div class="${cls}" data-i="${i}"><span class="option-key">${State.OPTION_LABELS[i]}</span><span class="option-text">${Utils.formatText(opt)}</span></div>`;
+            if (isTF) {
+                cls += i === 0 ? ' option-true' : ' option-false';
+            }
+            const optKey = isTF ? (i === 0 ? '✓' : '✗') : State.OPTION_LABELS[i];
+            return `<div class="${cls}" data-i="${i}"><span class="option-key">${optKey}</span><span class="option-text">${Utils.formatText(opt)}</span></div>`;
         }).join('');
 
         if (isAns && !ansData.isCorrect) UIQuiz.addAIBtn(q);

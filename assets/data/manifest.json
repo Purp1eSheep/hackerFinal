@@ -1,35 +1,102 @@
 [
     {
-        "subject": "Vibe 進階",
-        "count": 2,
-        "full_topic": "Vibe 進階",
+        "subject": "MITRE 與網頁安全攻擊",
+        "count": 74,
+        "full_topic": "MITRE 與網頁安全攻擊",
         "topics": [
             {
-                "title": "緊急應變",
-                "count": 1,
-                "full_topic": "緊急應變"
+                "title": "MITRE ATT&CK 框架",
+                "count": 13,
+                "full_topic": "MITRE ATT&CK 框架"
             },
             {
-                "title": "職業素養",
-                "count": 1,
-                "full_topic": "職業素養"
+                "title": "OWASP 網頁弱點與防禦",
+                "count": 33,
+                "full_topic": "OWASP 網頁弱點與防禦"
+            },
+            {
+                "title": "SQL 注入與防禦",
+                "count": 5,
+                "full_topic": "SQL 注入與防禦"
+            },
+            {
+                "title": "假無線 AP 與中間人攻擊",
+                "count": 5,
+                "full_topic": "假無線 AP 與中間人攻擊"
+            },
+            {
+                "title": "憑證重用與防禦",
+                "count": 7,
+                "full_topic": "憑證重用與防禦"
+            },
+            {
+                "title": "會話劫持與傳輸加密",
+                "count": 5,
+                "full_topic": "會話劫持與傳輸加密"
+            },
+            {
+                "title": "瀏覽器劫持與惡意擴充",
+                "count": 3,
+                "full_topic": "瀏覽器劫持與惡意擴充"
+            },
+            {
+                "title": "社交工程與釣魚",
+                "count": 3,
+                "full_topic": "社交工程與釣魚"
             }
         ]
     },
     {
-        "subject": "Vibe 入門",
-        "count": 2,
-        "full_topic": "Vibe 入門",
+        "subject": "無線網路與藍牙安全",
+        "count": 50,
+        "full_topic": "無線網路與藍牙安全",
         "topics": [
             {
-                "title": "生存心法",
-                "count": 1,
-                "full_topic": "生存心法"
+                "title": "Wi-Fi 安全與加密協定",
+                "count": 22,
+                "full_topic": "Wi-Fi 安全與加密協定"
             },
             {
-                "title": "物資整備",
-                "count": 1,
-                "full_topic": "物資整備"
+                "title": "無線網路稽核與工具",
+                "count": 9,
+                "full_topic": "無線網路稽核與工具"
+            },
+            {
+                "title": "藍牙安全性與漏洞",
+                "count": 14,
+                "full_topic": "藍牙安全性與漏洞"
+            },
+            {
+                "title": "頻譜與寬頻無線技術",
+                "count": 5,
+                "full_topic": "頻譜與寬頻無線技術"
+            }
+        ]
+    },
+    {
+        "subject": "道德駭客與偵查技術",
+        "count": 36,
+        "full_topic": "道德駭客與偵查技術",
+        "topics": [
+            {
+                "title": "滲透測試方法論",
+                "count": 8,
+                "full_topic": "滲透測試方法論"
+            },
+            {
+                "title": "漏洞掃描與評估",
+                "count": 9,
+                "full_topic": "漏洞掃描與評估"
+            },
+            {
+                "title": "資訊蒐集與 WHOIS",
+                "count": 6,
+                "full_topic": "資訊蒐集與 WHOIS"
+            },
+            {
+                "title": "道德駭客基礎與法規",
+                "count": 13,
+                "full_topic": "道德駭客基礎與法規"
             }
         ]
     }
