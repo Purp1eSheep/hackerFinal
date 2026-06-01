@@ -1,0 +1,36 @@
+[
+    {
+        "subject": "Vibe 進階",
+        "count": 2,
+        "full_topic": "Vibe 進階",
+        "topics": [
+            {
+                "title": "緊急應變",
+                "count": 1,
+                "full_topic": "緊急應變"
+            },
+            {
+                "title": "職業素養",
+                "count": 1,
+                "full_topic": "職業素養"
+            }
+        ]
+    },
+    {
+        "subject": "Vibe 入門",
+        "count": 2,
+        "full_topic": "Vibe 入門",
+        "topics": [
+            {
+                "title": "生存心法",
+                "count": 1,
+                "full_topic": "生存心法"
+            },
+            {
+                "title": "物資整備",
+                "count": 1,
+                "full_topic": "物資整備"
+            }
+        ]
+    }
+]
