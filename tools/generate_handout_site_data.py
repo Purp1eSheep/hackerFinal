@@ -63,77 +63,29 @@ def classify_question(q_id, question_text):
 
 def load_questions():
     questions_by_topic = {}
-    
-    # 處理 choice.csv
-    choice_path = 'questions/choice.csv'
-    if os.path.exists(choice_path):
+    all_questions_path = 'assets/data/all_questions.csv'
+    if os.path.exists(all_questions_path):
         try:
-            with open(choice_path, 'r', encoding='utf-8-sig') as f:
+            with open(all_questions_path, 'r', encoding='utf-8-sig') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    raw_id = (row.get('ID') or '').strip()
-                    if not raw_id:
-                        continue
-                    q_text = (row.get('Question') or '').strip()
-                    q_type = (row.get('Question_Type') or '').strip()
+                    q_id = row.get('id')
+                    q_text = row.get('question')
+                    options = json.loads(row.get('options') or '[]')
+                    answer = json.loads(row.get('answer') or '0')
+                    topic_name = row.get('topic')
                     
-                    opt_a = (row.get('Option_A') or '').strip()
-                    opt_b = (row.get('Option_B') or '').strip()
-                    opt_c = (row.get('Option_C') or '').strip()
-                    opt_d = (row.get('Option_D') or '').strip()
-                    
-                    if q_type == 'True/False' or (not opt_a and not opt_b):
-                        options = ["True", "False"]
-                        correct_val = (row.get('Correct_Answer') or '').strip().upper()
-                        answer = 0 if correct_val in ['T', 'TRUE'] else 1
-                    else:
-                        options = [opt_a, opt_b, opt_c, opt_d]
-                        options = [opt for opt in options if opt]
-                        correct_val = (row.get('Correct_Answer') or '').strip().upper()
-                        mapping = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
-                        answer = mapping.get(correct_val, 0)
-                        
-                    _, topic_name = classify_question(raw_id, q_text)
                     if topic_name not in questions_by_topic:
                         questions_by_topic[topic_name] = []
                     
                     questions_by_topic[topic_name].append({
-                        "id": f"Q{int(raw_id):03d}",
+                        "id": q_id,
                         "question": q_text,
                         "options": options,
                         "answer": answer
                     })
         except Exception as e:
-            print(f"Error reading choice.csv: {e}")
-
-    # 處理 truefalse.csv
-    tf_path = 'questions/truefalse.csv'
-    if os.path.exists(tf_path):
-        try:
-            with open(tf_path, 'r', encoding='utf-8-sig') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    raw_id = (row.get('ID') or '').strip()
-                    if not raw_id:
-                        continue
-                    q_text = (row.get('Question') or '').strip()
-                    options = ["True", "False"]
-                    correct_val = (row.get('Correct_Answer') or '').strip().upper()
-                    answer = 0 if correct_val in ['T', 'TRUE'] else 1
-                    
-                    _, topic_name = classify_question(raw_id, q_text)
-                    if topic_name not in questions_by_topic:
-                        questions_by_topic[topic_name] = []
-                        
-                    questions_by_topic[topic_name].append({
-                        "id": f"Q{int(raw_id):03d}",
-                        "question": q_text,
-                        "options": options,
-                        "answer": answer
-                    })
-        except Exception as e:
-            print(f"Error reading truefalse.csv: {e}")
-            
+            print(f"Error reading all_questions.csv: {e}")
     return questions_by_topic
 
 def main():

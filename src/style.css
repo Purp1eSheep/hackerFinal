@@ -433,13 +433,3 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* 學習講義響應式樣式 */
-@media (max-width: 680px) {
-    #handout-layout {
-        grid-template-columns: 1fr !important;
-    }
-    #handout-topics-menu {
-        max-height: 200px !important;
-    }
-}
-

@@ -211,6 +211,13 @@ def merge_questions():
     # 排序：按 ID 排序 (可以讓題目順序一致)
     all_questions.sort(key=lambda x: x['id'])
 
+    # 重新編號：讓 Q 開頭的題目 ID 從 Q0 開始
+    q_counter = 0
+    for q in all_questions:
+        if q["id"].startswith("Q"):
+            q["id"] = f"Q{q_counter}"
+            q_counter += 1
+
     # 輸出到 CSV 檔
     with open(output_file, 'w', encoding='utf-8-sig', newline='') as f:
         fieldnames = ['id', 'question', 'options', 'answer', 'topic']
