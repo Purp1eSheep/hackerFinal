@@ -73,6 +73,11 @@ def load_questions():
                     q_text = row.get('question')
                     options = json.loads(row.get('options') or '[]')
                     answer = json.loads(row.get('answer') or '0')
+                    # Normalize to 0-based index
+                    if isinstance(answer, int):
+                        answer = answer - 1
+                    elif isinstance(answer, list):
+                        answer = [a - 1 if isinstance(a, int) else a for a in answer]
                     topic_name = row.get('topic')
                     
                     if topic_name not in questions_by_topic:
@@ -482,7 +487,7 @@ MITRE ATT&CK 是一個全球通用的對抗戰術、技術和常識知識庫。
         h["questions"] = related_q[:4]
 
     # 輸出 js 檔案
-    output_dir = '/home/purplesheep/Documents/repos/hackerFinal/handouts'
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'handouts')
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 

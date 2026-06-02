@@ -386,7 +386,7 @@ MITRE ATT&CK 是一個全球通用的對抗戰術、技術和常識知識庫。
         }
     ]
 
-    target_dir = '/home/purplesheep/Documents/repos/hackerFinal/assets/data'
+    target_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'assets', 'data')
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
 

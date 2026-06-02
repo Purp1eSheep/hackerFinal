@@ -149,12 +149,13 @@ Q146,Initial Access is the first Tactic used by attackers to enter a network.,"[
 Q147,Airbase-ng is a tool specifically designed to repair SQL databases.,"[""True"", ""False""]",2,OWASP 網頁弱點與防禦
 Q148,Network Sniffing refers to the capture of network traffic to obtain sensitive information.,"[""True"", ""False""]",2,憑證重用與防禦
 Q149,Understanding an attacker's Tactic (objective) helps analysts connect evidence to appropriate mitigations.,"[""True"", ""False""]",2,MITRE ATT&CK 框架
-Q150,You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.,"[""True"", ""False""]",2,道德駭客基礎與法規
-Q151,Ethical hacking is a one-time event that does not need to be repeated.,"[""True"", ""False""]",2,道德駭客基礎與法規
-Q152,"Penetration Testing evaluates procedural, operational, and technological controls.","[""True"", ""False""]",2,滲透測試方法論
-Q153,Overt Penetration Testing is performed without the knowledge of the IT department.,"[""True"", ""False""]",2,滲透測試方法論
-Q154,Covert Penetration Testing most closely simulates a true adversarial attack.,"[""True"", ""False""]",2,滲透測試方法論
-Q155,The purpose of WHOIS is to exploit the target's database directly.,"[""True"", ""False""]",2,資訊蒐集與 WHOIS
-Q156,Password cracking and network analyzers should generally be removed from the final report to prevent abuse.,"[""True"", ""False""]",2,漏洞掃描與評估
-Q157,HIPAA compliance only requires organizations to perform tests once every ten years.,"[""True"", ""False""]",2,漏洞掃描與評估
-Q158,Mastery of Linux network interfaces is required before launching many security tools.,"[""True"", ""False""]",2,漏洞掃描與評估
+Q150,100 percent,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q151,You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q152,Ethical hacking is a one-time event that does not need to be repeated.,"[""True"", ""False""]",2,道德駭客基礎與法規
+Q153,"Penetration Testing evaluates procedural, operational, and technological controls.","[""True"", ""False""]",2,滲透測試方法論
+Q154,Overt Penetration Testing is performed without the knowledge of the IT department.,"[""True"", ""False""]",2,滲透測試方法論
+Q155,Covert Penetration Testing most closely simulates a true adversarial attack.,"[""True"", ""False""]",2,滲透測試方法論
+Q156,The purpose of WHOIS is to exploit the target's database directly.,"[""True"", ""False""]",2,資訊蒐集與 WHOIS
+Q157,Password cracking and network analyzers should generally be removed from the final report to prevent abuse.,"[""True"", ""False""]",2,漏洞掃描與評估
+Q158,HIPAA compliance only requires organizations to perform tests once every ten years.,"[""True"", ""False""]",2,漏洞掃描與評估
+Q159,Mastery of Linux network interfaces is required before launching many security tools.,"[""True"", ""False""]",2,漏洞掃描與評估

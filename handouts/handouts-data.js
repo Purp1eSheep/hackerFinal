@@ -15,7 +15,7 @@ const HANDOUTS_DATA = [
                     "Using free tools",
                     "Not knowing how to code"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q1",
@@ -26,7 +26,7 @@ const HANDOUTS_DATA = [
                     "The plan, schedule, and systems to test",
                     "A guarantee to find all vulnerabilities"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q2",
@@ -37,7 +37,7 @@ const HANDOUTS_DATA = [
                     "No, because so many known and unknown vulnerabilities exist",
                     "No, because clients won't let you see everything"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q3",
@@ -48,7 +48,7 @@ const HANDOUTS_DATA = [
                     "One test is enough to eliminate all risks",
                     "Patching and hardening systems is useless"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -67,7 +67,7 @@ const HANDOUTS_DATA = [
                     "Penetration Test",
                     "Intelligence Gathering"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q11",
@@ -78,7 +78,7 @@ const HANDOUTS_DATA = [
                     "CEH",
                     "GPEN"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q12",
@@ -89,7 +89,7 @@ const HANDOUTS_DATA = [
                     "Overt Testing",
                     "Reconnaissance"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q13",
@@ -100,7 +100,7 @@ const HANDOUTS_DATA = [
                     "It is the most realistic simulation",
                     "It is performed without the IT team's knowledge"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -119,7 +119,7 @@ const HANDOUTS_DATA = [
                     "To write the final report",
                     "To crash the target's server"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q16",
@@ -130,7 +130,7 @@ const HANDOUTS_DATA = [
                     "whois",
                     "Medusa"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q17",
@@ -141,7 +141,7 @@ const HANDOUTS_DATA = [
                     "To encrypt the final report",
                     "To hire a hacker"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q18",
@@ -152,7 +152,7 @@ const HANDOUTS_DATA = [
                     "nmap -sS [IP address]",
                     "whois target_domain"
                 ],
-                "answer": 3
+                "answer": 2
             }
         ]
     },
@@ -171,7 +171,7 @@ const HANDOUTS_DATA = [
                     "Google Search",
                     "theHarvester"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q20",
@@ -182,7 +182,7 @@ const HANDOUTS_DATA = [
                     "Hidden from the manager",
                     "Written in highly technical jargon"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q21",
@@ -193,7 +193,7 @@ const HANDOUTS_DATA = [
                     "Send it to the entire company",
                     "Keep it in plain text"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q26",
@@ -204,7 +204,7 @@ const HANDOUTS_DATA = [
                     "To set up a WHOIS server",
                     "To practice typing"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -223,7 +223,7 @@ const HANDOUTS_DATA = [
                     "Specific tools used and actual testing steps",
                     "The summary of vulnerabilities"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q23",
@@ -234,7 +234,7 @@ const HANDOUTS_DATA = [
                     "Adobe Certified Professional",
                     "PMP"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q24",
@@ -245,7 +245,7 @@ const HANDOUTS_DATA = [
                     "Netcat",
                     "Cain & Abel"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q29",
@@ -256,7 +256,7 @@ const HANDOUTS_DATA = [
                     "A bureaucratic mindset",
                     "A profit-only mindset"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -275,7 +275,7 @@ const HANDOUTS_DATA = [
                     "Encrypt user data",
                     "Improve server performance"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q37",
@@ -286,7 +286,7 @@ const HANDOUTS_DATA = [
                     "Inside data centers",
                     "Offline environments"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q38",
@@ -297,7 +297,7 @@ const HANDOUTS_DATA = [
                     "Wireshark",
                     "Metasploit"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q131",
@@ -306,7 +306,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -325,7 +325,7 @@ const HANDOUTS_DATA = [
                     "T1566",
                     "T1078"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q39",
@@ -336,7 +336,7 @@ const HANDOUTS_DATA = [
                     "Steal session cookies",
                     "Attack a database backend"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q137",
@@ -345,7 +345,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -364,7 +364,7 @@ const HANDOUTS_DATA = [
                     "Browser Hijacker",
                     "Bait and Switch"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q44",
@@ -375,7 +375,7 @@ const HANDOUTS_DATA = [
                     "SQL query syntax",
                     "Ad-blocking records"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q45",
@@ -386,7 +386,7 @@ const HANDOUTS_DATA = [
                     "Install antivirus software",
                     "Avoid public Wi-Fi"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q133",
@@ -395,7 +395,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -414,7 +414,7 @@ const HANDOUTS_DATA = [
                     "Failure to properly validate or sanitize input data",
                     "Too many browser plugins"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q40",
@@ -425,7 +425,7 @@ const HANDOUTS_DATA = [
                     "Enable MFA",
                     "Review email logs"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q47",
@@ -436,7 +436,7 @@ const HANDOUTS_DATA = [
                     "Fake WAP",
                     "Browser Hijacker"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q132",
@@ -445,7 +445,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -464,7 +464,7 @@ const HANDOUTS_DATA = [
                     "Download software only from official websites",
                     "Change desktop wallpapers regularly"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q46",
@@ -475,7 +475,7 @@ const HANDOUTS_DATA = [
                     "The user's BIOS password",
                     "The router's SSID"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q136",
@@ -484,7 +484,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q138",
@@ -493,7 +493,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -512,7 +512,7 @@ const HANDOUTS_DATA = [
                     "Hard drive data is encrypted",
                     "Screen resolution decreases"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q135",
@@ -521,7 +521,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q143",
@@ -530,7 +530,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -549,7 +549,7 @@ const HANDOUTS_DATA = [
                     "Replace all firewalls",
                     "Specifically for software development"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q49",
@@ -560,7 +560,7 @@ const HANDOUTS_DATA = [
                     "ARP Spoofing",
                     "DoS"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q50",
@@ -571,7 +571,7 @@ const HANDOUTS_DATA = [
                     "A1 – injection",
                     "A4 – XML external entity (XXE)"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q51",
@@ -582,7 +582,7 @@ const HANDOUTS_DATA = [
                     "Broken authentication",
                     "Cross-site scripting (XSS)"
                 ],
-                "answer": 1
+                "answer": 0
             }
         ]
     },
@@ -601,7 +601,7 @@ const HANDOUTS_DATA = [
                     "WPA",
                     "WPA2"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q59",
@@ -612,7 +612,7 @@ const HANDOUTS_DATA = [
                     "WPA2-Enterprise",
                     "WPA2-Personal"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q69",
@@ -623,7 +623,7 @@ const HANDOUTS_DATA = [
                     "The frequency band",
                     "The connection process"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q70",
@@ -634,7 +634,7 @@ const HANDOUTS_DATA = [
                     "FHSS",
                     "MIMO-OFDM"
                 ],
-                "answer": 3
+                "answer": 2
             }
         ]
     },
@@ -653,7 +653,7 @@ const HANDOUTS_DATA = [
                     "Airodump-ng",
                     "Aireplay-ng"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q83",
@@ -664,7 +664,7 @@ const HANDOUTS_DATA = [
                     "Airdecap-ng",
                     "Airgraph-ng"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q89",
@@ -675,7 +675,7 @@ const HANDOUTS_DATA = [
                     "Bluetooth pairing",
                     "Error message handling"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q90",
@@ -686,7 +686,7 @@ const HANDOUTS_DATA = [
                     "Airtun-ng",
                     "Packetforge-ng"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -705,7 +705,7 @@ const HANDOUTS_DATA = [
                     "802.16",
                     "802.11a"
                 ],
-                "answer": 1
+                "answer": 0
             },
             {
                 "id": "Q72",
@@ -716,7 +716,7 @@ const HANDOUTS_DATA = [
                     "WEP",
                     "TKIP"
                 ],
-                "answer": 3
+                "answer": 2
             },
             {
                 "id": "Q78",
@@ -727,7 +727,7 @@ const HANDOUTS_DATA = [
                     "Stealing documents",
                     "Modifying data"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q79",
@@ -738,7 +738,7 @@ const HANDOUTS_DATA = [
                     "Bluesnarfing",
                     "Bluebugging"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     },
@@ -757,7 +757,7 @@ const HANDOUTS_DATA = [
                     "SSID",
                     "DSSS"
                 ],
-                "answer": 4
+                "answer": 3
             },
             {
                 "id": "Q56",
@@ -768,7 +768,7 @@ const HANDOUTS_DATA = [
                     "ZigBee",
                     "Bluetooth"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q57",
@@ -779,7 +779,7 @@ const HANDOUTS_DATA = [
                     "Unauthorized association",
                     "AP MAC spoofing"
                 ],
-                "answer": 2
+                "answer": 1
             },
             {
                 "id": "Q119",
@@ -788,7 +788,7 @@ const HANDOUTS_DATA = [
                     "True",
                     "False"
                 ],
-                "answer": 2
+                "answer": 1
             }
         ]
     }
