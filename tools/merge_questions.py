@@ -2,11 +2,49 @@ import json
 import os
 import csv
 
+def is_mitre_or_tool_question(question_text):
+    low_text = question_text.lower()
+    # Check for T-codes (e.g. T1190, T1566)
+    if any(t in low_text for t in ["t1190", "t1566", "t1040", "t1557", "t1204", "t1110.004", "t1078"]):
+        return True
+    # Check for specific tool names
+    tool_keywords = [
+        "nmap", "whois", "theharvester", "nessus", "burp suite", "nikto", 
+        "owasp zap", "wifi-pumpkin", "airmon-ng", "airodump-ng", "aireplay-ng", 
+        "aircrack-ng", "airdecap-ng", "airgraph-ng", "radius", "rfprotect", 
+        "tkiptun-ng", "airbase-ng"
+    ]
+    if any(tk in low_text for tk in tool_keywords):
+        return True
+    # Check for generic "which tool" or "which command" with specific features
+    if "which tool" in low_text or "which command" in low_text or "which wireless tool" in low_text:
+        sub_keywords = [
+            "vulnerability scanning", "e-mail address", "centralized authentication", 
+            "automated scanning", "vulnerabilities", "denial-of-service", "fake wap", 
+            "whois", "wireless headers", "web application testing", "decrypt"
+        ]
+        if any(sk in low_text for sk in sub_keywords):
+            return True
+    return False
+
 def classify_question(q_id, question_text):
     try:
         q_id = int(q_id)
-    except ValueError:
-        return "道德駭客與偵查技術", "其他安全主題"
+    except (ValueError, TypeError):
+        # Heuristics fallback
+        if is_mitre_or_tool_question(question_text):
+            return "MITRE 與網頁安全攻擊", "常考 MITRE 技術與資安工具"
+        low_text = question_text.lower()
+        if "wireless" in low_text or "wifi" in low_text or "802.11" in low_text or "ap" in low_text:
+            return "無線網路與藍牙安全", "Wi-Fi 安全與加密協定"
+        elif "bluetooth" in low_text or "blue" in low_text:
+            return "無線網路與藍牙安全", "藍牙安全性與漏洞"
+        elif "sql" in low_text or "injection" in low_text or "web" in low_text or "owasp" in low_text:
+            return "MITRE 與網頁安全攻擊", "OWASP 網頁弱點與防禦"
+        elif "mitre" in low_text or "tactic" in low_text or "technique" in low_text:
+            return "MITRE 與網頁安全攻擊", "MITRE ATT&CK 框架"
+        else:
+            return "道德駭客與偵查技術", "道德駭客基礎與法規"
     
     # Subject 1: Ethical Hacking & Reconnaissance (道德駭客與偵查技術)
     if q_id in [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 161, 162, 163]:
@@ -59,6 +97,56 @@ def classify_question(q_id, question_text):
     else:
         return "道德駭客與偵查技術", "其他安全主題"
 
+def merge_options(options_list):
+    merged = []
+    for opt in options_list:
+        if merged and opt.startswith(' '):
+            merged[-1] = merged[-1] + ',' + opt
+        else:
+            merged.append(opt)
+    return merged
+
+def load_existing_classifications(output_dir):
+    all_questions_path = os.path.join(output_dir, 'all_questions.csv')
+    manifest_path = os.path.join(output_dir, 'manifest.json')
+    
+    q_map = {} # normalized_question_text -> (topic, subject, old_id)
+    
+    if not os.path.exists(all_questions_path) or not os.path.exists(manifest_path):
+        return q_map
+        
+    try:
+        # 1. Build topic -> subject map from manifest.json
+        topic_to_subject = {}
+        with open(manifest_path, 'r', encoding='utf-8') as f:
+            manifest_data = json.load(f)
+            for item in manifest_data:
+                subject = item.get("subject")
+                for topic_item in item.get("topics", []):
+                    topic = topic_item.get("title")
+                    if topic and subject:
+                        topic_to_subject[topic] = subject
+                        
+        # 2. Read all_questions.csv and map question text to topic/subject
+        with open(all_questions_path, 'r', encoding='utf-8-sig') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                q_text = row.get("question", "").strip()
+                topic = row.get("topic", "").strip()
+                old_id = row.get("id", "").strip()
+                if q_text:
+                    norm = "".join(c for c in q_text if c.isalnum()).lower()
+                    subject = topic_to_subject.get(topic, "道德駭客與偵查技術")
+                    q_map[norm] = {
+                        "topic": topic,
+                        "subject": subject,
+                        "id": old_id
+                    }
+    except Exception as e:
+        print(f"警告：讀取現有 question base 失敗: {e}")
+        
+    return q_map
+
 def merge_questions():
     raw_dir = 'questions'
     output_dir = 'assets/data'
@@ -75,6 +163,9 @@ def merge_questions():
     
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+
+    # 載入已有的題庫分類資料以保持分類穩定
+    existing_q_map = load_existing_classifications(output_dir)
 
     # 1. 處理 JSON 檔案
     json_files = [f for f in os.listdir(raw_dir) if f.endswith('.json')]
@@ -113,90 +204,131 @@ def merge_questions():
         except Exception as e:
             print(f"處理 JSON {filename} 出事了: {e}")
 
-    # 2. 處理 choice.csv
-    choice_path = os.path.join(raw_dir, 'choice.csv')
+    # 2. 處理 multiple_choice.csv
+    choice_path = os.path.join(raw_dir, 'multiple_choice.csv')
     if os.path.exists(choice_path):
         try:
             with open(choice_path, 'r', encoding='utf-8-sig') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    raw_id = (row.get('ID') or '').strip()
-                    if not raw_id:
+                reader = csv.reader(f)
+                header = next(reader)
+                for idx, row in enumerate(reader, 2):
+                    if not row:
                         continue
                     
-                    q_id = f"Q{int(raw_id):03d}"
-                    if q_id in seen_ids:
+                    # 尋找答案欄位 (A, B, C, D)
+                    ans_indices = [i for i, val in enumerate(row) if val.strip() in ['A', 'B', 'C', 'D']]
+                    if not ans_indices:
+                        print(f"警告：選擇題第 {idx} 行找不到答案，跳過。")
                         continue
                     
-                    q_text = (row.get('Question') or '').strip()
-                    q_type = (row.get('Question_Type') or '').strip()
+                    ans_idx = ans_indices[0]
+                    q_text = ",".join(row[:ans_idx]).strip()
+                    if not q_text:
+                        continue
                     
-                    # 判斷是否為是非題
-                    opt_a = (row.get('Option_A') or '').strip()
-                    opt_b = (row.get('Option_B') or '').strip()
-                    opt_c = (row.get('Option_C') or '').strip()
-                    opt_d = (row.get('Option_D') or '').strip()
+                    correct_val = row[ans_idx].strip()
+                    mapping = {'A': 1, 'B': 2, 'C': 3, 'D': 4}
+                    answer = mapping.get(correct_val, 1)
                     
-                    if q_type == 'True/False' or (not opt_a and not opt_b):
-                        options = ["True", "False"]
-                        correct_val = (row.get('Correct_Answer') or '').strip().upper()
-                        answer = 1 if correct_val in ['T', 'TRUE'] else 2
+                    raw_options = row[ans_idx+1:]
+                    options = merge_options(raw_options)
+                    
+                    # 嘗試與舊題庫配對以取得穩定分類與 ID
+                    norm = "".join(c for c in q_text if c.isalnum()).lower()
+                    if is_mitre_or_tool_question(q_text):
+                        subject_name = "MITRE 與網頁安全攻擊"
+                        topic_name = "常考 MITRE 技術與資安工具"
+                        if norm in existing_q_map:
+                            old_id = existing_q_map[norm]["id"]
+                        else:
+                            old_id = f"Q_new_mc_{idx}"
+                    elif norm in existing_q_map:
+                        subject_name = existing_q_map[norm]["subject"]
+                        topic_name = existing_q_map[norm]["topic"]
+                        if topic_name in ["其他安全主題", "未分類 Vibe", ""]:
+                            subject_name, topic_name = classify_question(None, q_text)
+                        old_id = existing_q_map[norm]["id"]
                     else:
-                        # 選擇題
-                        options = [opt_a, opt_b, opt_c, opt_d]
-                        # 過濾空選項
-                        options = [opt for opt in options if opt]
-                        correct_val = (row.get('Correct_Answer') or '').strip().upper()
-                        mapping = {'A': 1, 'B': 2, 'C': 3, 'D': 4}
-                        answer = mapping.get(correct_val, 1)
-                    
-                    subject_name, topic_name = classify_question(raw_id, q_text)
+                        subject_name, topic_name = classify_question(None, q_text)
+                        old_id = f"Q_new_mc_{idx}"
+                        
+                    if old_id in seen_ids:
+                        temp_id = old_id
+                        counter = 1
+                        while temp_id in seen_ids:
+                            temp_id = f"{old_id}_{counter}"
+                            counter += 1
+                        old_id = temp_id
                     
                     all_questions.append({
-                        "id": q_id,
+                        "id": old_id,
                         "question": q_text,
                         "options": options,
                         "answer": answer,
                         "topic": topic_name,
                         "subject": subject_name
                     })
-                    seen_ids.add(q_id)
+                    seen_ids.add(old_id)
         except Exception as e:
-            print(f"處理 choice.csv 出事了: {e}")
+            print(f"處理 multiple_choice.csv 出事了: {e}")
 
-    # 3. 處理 truefalse.csv
-    tf_path = os.path.join(raw_dir, 'truefalse.csv')
+    # 3. 處理 true_false.csv
+    tf_path = os.path.join(raw_dir, 'true_false.csv')
     if os.path.exists(tf_path):
         try:
             with open(tf_path, 'r', encoding='utf-8-sig') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    raw_id = (row.get('ID') or '').strip()
-                    if not raw_id:
+                reader = csv.reader(f)
+                header = next(reader)
+                for idx, row in enumerate(reader, 2):
+                    if not row or len(row) < 2:
                         continue
                     
-                    q_id = f"Q{int(raw_id):03d}"
-                    if q_id in seen_ids:
+                    q_text = ",".join(row[:-1]).strip()
+                    if not q_text:
                         continue
                     
-                    q_text = (row.get('Question') or '').strip()
-                    options = ["True", "False"]
-                    correct_val = (row.get('Correct_Answer') or '').strip().upper()
+                    correct_val = row[-1].strip().upper()
                     answer = 1 if correct_val in ['T', 'TRUE'] else 2
+                    options = ["True", "False"]
                     
-                    subject_name, topic_name = classify_question(raw_id, q_text)
+                    # 嘗試與舊題庫配對以取得穩定分類與 ID
+                    norm = "".join(c for c in q_text if c.isalnum()).lower()
+                    if is_mitre_or_tool_question(q_text):
+                        subject_name = "MITRE 與網頁安全攻擊"
+                        topic_name = "常考 MITRE 技術與資安工具"
+                        if norm in existing_q_map:
+                            old_id = existing_q_map[norm]["id"]
+                        else:
+                            old_id = f"Q_new_tf_{idx}"
+                    elif norm in existing_q_map:
+                        subject_name = existing_q_map[norm]["subject"]
+                        topic_name = existing_q_map[norm]["topic"]
+                        if topic_name in ["其他安全主題", "未分類 Vibe", ""]:
+                            subject_name, topic_name = classify_question(None, q_text)
+                        old_id = existing_q_map[norm]["id"]
+                    else:
+                        subject_name, topic_name = classify_question(None, q_text)
+                        old_id = f"Q_new_tf_{idx}"
+                        
+                    if old_id in seen_ids:
+                        temp_id = old_id
+                        counter = 1
+                        while temp_id in seen_ids:
+                            temp_id = f"{old_id}_{counter}"
+                            counter += 1
+                        old_id = temp_id
                     
                     all_questions.append({
-                        "id": q_id,
+                        "id": old_id,
                         "question": q_text,
                         "options": options,
                         "answer": answer,
                         "topic": topic_name,
                         "subject": subject_name
                     })
-                    seen_ids.add(q_id)
+                    seen_ids.add(old_id)
         except Exception as e:
-            print(f"處理 truefalse.csv 出事了: {e}")
+            print(f"處理 true_false.csv 出事了: {e}")
 
     # 計算各科目與主題的題目數量並排序
     for q in all_questions:

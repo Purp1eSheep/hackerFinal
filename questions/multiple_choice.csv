@@ -1,0 +1,111 @@
+題目,答案,選項A,選項B,選項C,選項D
+"What is the most critical ""deadly mistake"" an ethical hacker can make before starting a test?",B,Not using Linux,Not getting prior approval in writing,Using free tools,Not knowing how to code
+When obtaining documented approval, what must be included?,C,A list of all passwords,The hacker's home address,"The plan, schedule, and systems to test",A guarantee to find all vulnerabilities
+Is it possible to find all vulnerabilities during a security test?,C,"Yes, if you use the right tools","Yes, if you are a certified expert",No, because so many known and unknown vulnerabilities exist,No, because clients won't let you see everything
+"Regarding security vulnerabilities, which of the following is true?",B,100 percent, ironclad security is attainable,Maintaining 100 percent security is not attainable,One test is enough to eliminate all risks,Patching and hardening systems is useless
+Why must ethical hacking tests be performed periodically?,B,To charge the client more money,Because new threats and vulnerabilities surface continually,Software never changes,To practice using new tools
+What does a ""good ethical hacker"" know?,B,Everything about information security,Their limitations and where to get answers,Only how to use one specific tool,How to bypass the law
+How should an ethical hacker view the target network?,B,From a manager's viewpoint,From a hacker's viewpoint,Only from the internal network,From a non-technical perspective
+Which systems should an ethical hacker focus on?,C,Standalone desktops with no network card,The most expensive hardware,Systems and operations that matter most,Only the oldest systems
+What is a risk of ""pounding production systems"" at the wrong time?,B,It might improve system performance,It could take down critical systems at the worst moment,Managers will be impressed by the speed,It saves the company money
+"If you outsource security testing, what is your responsibility?",A,To stay involved throughout the entire process,To hand over everything and forget about it,To never talk to the third party,To do the work yourself instead
+Which term is defined as ""a test evaluating the strengths of all security controls""?,C,Port Scanning,Social Engineering,Penetration Test,Intelligence Gathering
+Which compliance standard requires organizations to perform penetration tests at least once a year?,B,HIPAA,PCI-DSS,CEH,GPEN
+Which viewpoint simulates threats originating from within the trusted network environment?,B,External Attacker,Internal/Malicious Employee,Overt Testing,Reconnaissance
+What is an advantage of ""Overt Penetration Testing""?,B,It tests active incident response,Access to insider organizational knowledge,It is the most realistic simulation,It is performed without the IT team's knowledge
+What is a disadvantage of ""Covert Penetration Testing""?,B,It provides full access without blocks,It is costly and time-consuming,It does not test incident response,It uses too many tools
+What is the purpose of the ""Reconnaissance"" phase?,B,To exploit vulnerabilities,To discover as much information about a target as possible without network contact,To write the final report,To crash the target's server
+Which tool is used for discovering organization info via WHOIS?,C,Nmap,Nessus,whois,Medusa
+What is the purpose of ""Network Enumeration and Scanning""?,B,To steal credit card data,"To discover existing networks, live hosts, and services",To encrypt the final report,To hire a hacker
+Which command is used in Nmap to perform a scan?,C,ifconfig -a,apt-get update,nmap -sS [IP address],whois target_domain
+Which tool is primarily used for ""Remote vulnerability scanning""?,B,HTTrack,Nessus,Google Search,theHarvester
+"In the reporting phase, vulnerabilities should be:",B,Listed alphabetically,Prioritized,Hidden from the manager,Written in highly technical jargon
+"When e-mailing the final report, what must you do?",B,Use a public cloud link,Encrypt all attachments,Send it to the entire company,Keep it in plain text
+What should be removed from the final report to prevent malicious use by others?,C,The dates of testing,Recommendations for improvement,Specific tools used and actual testing steps,The summary of vulnerabilities
+Which certification is specifically mentioned as one for penetration testers?,B,Microsoft Word Expert,Certified Ethical Hacker (CEH),Adobe Certified Professional,PMP
+Which tool is used for ""Discovering and Leveraging E-mail Addresses""?,A,theHarvester,Wireshark,Netcat,Cain & Abel
+Which command is used to bring a network interface ""up"" in Linux?,B,poweroff,ifconfig eth0 up,apt-get install,dig @target_ip
+What is the purpose of ""Vulnerability Testing and Exploitation""?,B,To gather contact emails,To check hosts for known vulnerabilities and assess severity,To set up a WHOIS server,To practice typing
+"According to Table 16-1, ""Sensitive information stored on an unencrypted laptop"" is considered:",A,High Likelihood / High Impact,Low Likelihood / Low Impact,Medium Likelihood / High Impact,High Likelihood / Low Impact
+Which phase involves organizing information by hosts, services, and identified hazards?,C,Exploitation,Reconnaissance,Reporting,Scanning
+What mindset must organizations employ to survive modern threats?,B,A defensive-only mindset,A hacker mindset,A bureaucratic mindset,A profit-only mindset
+"In MITRE ATT&CK, what term describes what an attacker wants to achieve?",C,Procedure,Technique,Tactic,ID
+What is the primary purpose of a Fake WAP (Fake Wireless Access Point)?,B,Increase network bandwidth,Conduct Man-in-the-Middle (MITM) attacks or steal credentials,Encrypt user data,Improve server performance
+Which MITRE Technique ID corresponds to Phishing?,C,T1040,T1190,T1566,T1078
+An attacker uses credentials leaked from one website to attempt logins on other platforms. What type of attack is this?,B,SQL Injection,Credential Reuse,Browser Hijacker,Bait and Switch
+SQL Injection primarily exploits which weakness?,C,Unstable network connections,Weak user passwords,Failure to properly validate or sanitize input data,Too many browser plugins
+Which measure is most appropriate for preventing Session Hijacking?,A,Use HTTPS and HttpOnly Cookies,Install an ad blocker,Download software only from official websites,Change desktop wallpapers regularly
+"In the MITRE ATT&CK framework, what describes what an attacker specifically did in a real-world case?",C,Tactic,Technique,Procedure,Mitigation
+Fake WAP attacks are most likely to occur in which environment?,B,Private home offices,Public places such as airports and coffee shops,Inside data centers,Offline environments
+Which tool is commonly used to create a Fake WAP for testing or attacks?,B,SQLmap,WiFi-Pumpkin,Wireshark,Metasploit
+How does a Bait and Switch attack typically work?,B,Directly brute-force passwords,"Display a legitimate link first, then redirect users to malicious content",Steal session cookies,Attack a database backend
+Which is a recommended defense against SQL Injection?,B,Use a VPN,Use Parameterized Queries,Enable MFA,Review email logs
+"When an attacker positions themselves between two communicating parties to sniff or modify data, what is this called in MITRE?",A,Adversary-in-the-Middle (T1557),Valid Accounts,Phishing,Boot or Logon Initialization
+What is a common symptom of a Browser Hijacker?,B,The computer shuts down automatically,The homepage or search engine is changed to a malicious website,Hard drive data is encrypted,Screen resolution decreases
+"In MITRE ATT&CK, Initial Access belongs to which category?",C,Technique,Procedure,Tactic,Mitigation
+Which data source is most useful for detecting attackers using Valid Accounts?,B,Browser settings,Login logs or anomalous IP records,SQL query syntax,Ad-blocking records
+What is the best recommendation for preventing Credential Reuse?,B,Use a VPN,Use a password manager and enable MFA,Install antivirus software,Avoid public Wi-Fi
+"During Session Hijacking, what information is typically stolen?",B,The user's physical hardware,Session Cookie or Session ID,The user's BIOS password,The router's SSID
+Exploit Public-Facing Application (T1190) is commonly associated with which attack method?,A,SQL Injection,Phishing,Fake WAP,Browser Hijacker
+What is the primary purpose of the MITRE ATT&CK framework?,A,Transform unstructured security incidents into structured attack behavior analysis,Used only for data backup,Replace all firewalls,Specifically for software development
+Which attack belongs to the category of Social Engineering?,B,MAC Spoofing,Watering Hole Attack,ARP Spoofing,DoS
+"Which of the following application security risks occurs when untrusted data is sent to an interpreter as part of a command or query, according to the OWASP?",C,A6 – security misconfiguration,A3 – Sensitive data exposure,A1 – injection,A4 – XML external entity (XXE)
+Which of the following security risks can disclose internal files using the file URI handler, remote code execution, and DoS attacks such as the billion laughs attack?,A,XML external entity (XXE),Command injection,Broken authentication,Cross-site scripting (XSS)
+Which of the following practices is NOT a countermeasure to defend against web server attacks?,B,Physically protect the machine,Install IIS server on a domain controller,Store website files on a separate drive,Screen and filter incoming traffic
+In which layer of the vulnerability stack do security professionals configure solutions such as IDS and IPS?,C,Layer 3,Layer 5,Layer 7,Layer 1
+Identify the type of SQL injection technique used by the attacker when they cannot directly exploit any other techniques.,C,In-band SQL injection,Error-based SQL injection,Blind SQL injection,Out-of-band SQL injection
+Which of the following terms is a spread spectrum technique that multiplies the original data signal with a pseudo-random noise-spreading code?,D,ISM band,BSSID,SSID,DSSS
+Identify the IEEE 802.16 standard.,B,Wi-Fi,WiMax,ZigBee,Bluetooth
+In which of the following attacks does an attacker create a soft AP on a laptop to make the laptop’s NIC appear as a legitimate AP?,C,Ad-hoc connection,Honeypot AP,Unauthorized association,AP MAC spoofing
+Identify the protocol that uses AES-GCMP 256 encryption and ECDH/ECDSA key management.,B,WEP,WPA3,WPA,WPA2
+Which mode of operation is responsible for Delivering password-based authentication using the SAE protocol?,A,WPA3-Personal,WPA3-Enterprise,WPA2-Enterprise,WPA2-Personal
+"What is the rank of ""Broken Access Control"" in OWASP Top 10 (2021)?",C,#3,#5,#1,#10
+Which vulnerability involves exploiting authentication or session management functions to impersonate users?,B,Injection,Broken Authentication,XXE,XSS
+"""Parameter tampering"" is used to modify application data between which two entities?",B,Database and Server,Client and Server,Router and AP,OS and Kernel
+According to the sources, why are vulnerable components dangerous?,B,They have no encryption,They often run with full privileges,They are only found on Windows,They slow down the network
+"What does ""Insufficient logging and monitoring"" refer to?",B,Recording too much data,Detection software ignoring important event details,Using weak passwords,Not having a firewall
+Which tool supports the entire web application testing process, from mapping to exploiting vulnerabilities?,C,Metasploit,Nikto,Burp Suite,Sn1per
+Which is a recommended countermeasure for Sensitive Data Exposure?,A,Generate encryption keys offline,Use weak algorithms for speed,Store session IDs in GET requests,Disable SSL
+To defend against SQL injection, developers should avoid building SQL statements directly from:,B,Stored procedures,User input,Binary data,Parameters
+"In the Ruben scenario, which security misconfiguration was detected?",B,Improper error handling,Insufficient transport layer protection,Unvalidated inputs,Broken access control
+What is the BSSID in wireless terminology?,B,The name of the network,The MAC address of an Access Point,The frequency band,The connection process
+Which spread spectrum method switches a carrier among many frequency channels?,C,DSSS,OFDM,FHSS,MIMO-OFDM
+Which IEEE amendment specifies security mechanisms for 802.11 networks?,A,802.11i,802.11b,802.16,802.11a
+Which encryption algorithm uses a 24-bit Initialization Vector (IV)?,C,WPA2,AES,WEP,TKIP
+What does WPA2 integrate for centralized client authentication?,B,PSK,EAP or RADIUS,SSID,SAE
+Which protocol serves as the replacement for WEP in WPA?,B,AES,TKIP,CCMP,GCMP
+WPA3-Personal uses which protocol for key exchange?,C,TKIP,MIC,Dragonfly,Kerberos
+A ""Soft AP"" attack allows an unauthorized connection to which entity?,B,The Internet,The Enterprise network,A Bluetooth headset,A specific website
+The ""billion laughs attack"" is associated with which vulnerability?,B,SQLi,XXE,SSRF,XSS
+What is the goal of ""BluePrinting"" in Bluetooth attacks?,B,Crashing the device,Collecting information about manufacturer and firmware,Stealing documents,Modifying data
+Which Bluetooth attack involves sending unsolicited messages?,B,Bluesmacking,Bluejacking,Bluesnarfing,Bluebugging
+The theft of information through a Bluetooth connection is called:,B,Bluejacking,Bluesnarfing,BlueSniff,Bluebugging
+Which attack overflows Bluetooth devices with random packets to cause a crash?,A,Bluesmacking,Bluejacking,Bluebugging,KNOB attack
+Which Aircrack-ng tool is used to enable monitor mode on wireless interfaces?,B,Aircrack-ng,Airmon-ng,Airodump-ng,Aireplay-ng
+Which tool is used to decrypt WEP/WPA packets and strip wireless headers?,C,Airtun-ng,Easside-ng,Airdecap-ng,Airgraph-ng
+The KNOB attack exploits a vulnerability in Bluetooth to perform:,B,Denial of Service,Eavesdropping on shared data,Remote control,MAC spoofing
+Which Bluetooth mode rejects every pairing request?,B,Discoverable,Non-pairable,Pairable,Limited discoverable
+What is a best practice for wireless configuration regarding SSID?,B,Broadcast the SSID,Use SSID hiding (cloaking),Keep the default SSID,Use the SSID as a password
+Where should a firewall be placed for wireless security?,B,Behind the database,Between the AP and the corporate intranet,On the user's laptop,Outside the physical machine room
+Which tool is a ""centralized authentication and authorization management system""?,A,RADIUS,Burp Suite,WiMax,Sn1per
+"In the Samson scenario, which vulnerability process was compromised?",B,SQL query validation,WPA2 four-way handshake,Bluetooth pairing,Error message handling
+Which Aircrack-ng tool creates a client-to-AP relationship graph?,B,Airbase-ng,Airgraph-ng,Airtun-ng,Packetforge-ng
+"What does ""MIMO-OFDM"" stand for in terms of application?",B,2G communications,4G and 5G broadband wireless,Wired LAN security,Bluetooth middleware
+Which Bluetooth threat involves terrorists sending false bomb threats?,B,Leakage of calendars,Sending SMS messages,Bugging devices,Causing financial losses
+To prevent web application attacks, non-SSL requests should be:,B,Dropped,Redirected to the SSL page,Logged but allowed,Handled by Layer 3
+Which is NOT an injection type mentioned in the sources?,D,Command injection,LDAP injection,SQL injection,CSS injection
+Which wireless term describes the process of connecting a device to an AP?,B,Authentication,Association,Modulation,Sniffing
+What is the character limit for an SSID?,B,16,32,64,128
+Which vulnerability can lead to remote code execution and DoS via internal files?,A,A4 – XXE,A1 – Injection,A2 – Broken Authentication,A9 – Vulnerable components
+Which tool is used for automated scanning in web security?,B,Burp Suite,OWASP Zed Attack Proxy,Nikto,Metasploit
+To secure a database, testing teams should avoid constructing dynamic SQL with:,B,Prepared statements,Concatenated input values,Stored procedures,Multi-layer validation
+Which protocol encapsulates EAP within a TLS tunnel?,B,LEAP,PEAP,WEP,TKIP
+WPA3 authentication uses which integrity check mechanism?,A,BIP-GMAC-256,HMAC-MD5,MIC,SAE
+Which attack technique tricks users into connecting to a rogue AP by copying its SSID?,B,Misconfigured AP,Honeypot AP,Unauthorized association,Bluetooth sniffing
+Which wireless tool protects against denial-of-service and man-in-the-middle attacks?,C,Weevely,Astra,RFProtect,Mole
+What should be done with past paired Bluetooth devices?,B,Keep them for convenience,Regularly check and delete them,Share them with the network,Use them to store keys
+What is the frequency set for international industrial, scientific, and medical communities?,B,GSM,ISM band,SSID,5G
+Which protocol uses CCMP (an AES-based mode) for strong security?,C,WEP,WPA,WPA2,LEAP
+"In wireless security, why should the network be disabled when not required?",B,To save battery,To defend against potential attacks,To clear the SSID,To reset the RADIUS server
+Which attack allows hackers to remotely control a phone to make calls?,A,Bluebugging,Bluejacking,BluePrinting,Bluesmacking
+Which Aircrack-ng tool injects frames into a WPA TKIP network with QoS?,B,Airtun-ng,Tkiptun-ng,Aireplay-ng,WZCook

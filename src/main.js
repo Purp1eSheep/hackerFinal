@@ -83,6 +83,26 @@ async function init() {
             throw new Error('題庫載入後無有效題目，請確認 CSV 格式。');
         }
 
+        // 清理已不存在於題庫中的舊錯題 ID 與統計數據
+        const validIds = new Set(State.globalQuestions.map(q => q.id));
+        const wrongIds = Storage.get(Storage.KEYS.WRONG, []);
+        const cleanWrongIds = wrongIds.filter(id => validIds.has(id));
+        if (wrongIds.length !== cleanWrongIds.length) {
+            Storage.set(Storage.KEYS.WRONG, cleanWrongIds);
+        }
+
+        const stats = Storage.get(Storage.KEYS.STATS, {});
+        let statsChanged = false;
+        for (const id in stats) {
+            if (!validIds.has(id)) {
+                delete stats[id];
+                statsChanged = true;
+            }
+        }
+        if (statsChanged) {
+            Storage.set(Storage.KEYS.STATS, stats);
+        }
+
         UI.renderQuizList();
     } catch (e) {
         console.error('初始化失敗:', e);
@@ -485,17 +505,19 @@ function checkProgress() {
             State.currentIdx = p.idx; 
             State.answers = p.ans; 
             State.isComprehensive = p.comp;
-            State.currentSelection = new Set(p.sel || []);
+            const savedSel = new Set(p.sel || []);
             banner.classList.add('hidden');
             UI.switchScreen('quiz'); 
             UI.renderQuestion();
             
             // 如果恢復後發現該題已有選擇但未送出，需要還原 UI 選擇狀態
-            if (State.answers[State.currentIdx] === null && State.currentSelection.size > 0) {
+            if (State.answers[State.currentIdx] === null && savedSel.size > 0) {
+                State.currentSelection = savedSel;
                 DOM.optionsWrap.querySelectorAll('.option').forEach(el => {
                     const idx = parseInt(el.dataset.i);
                     if (State.currentSelection.has(idx)) el.classList.add('selected');
                 });
+                UI.updateNextBtnUI();
             }
         };
         document.getElementById('resume-no-btn').onclick = () => { 

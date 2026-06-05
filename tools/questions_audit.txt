@@ -1,0 +1,548 @@
+
+==================================================
+Topic: MITRE ATT&CK 框架 (12 questions)
+==================================================
+- [Q90] Tactic refers to how an attacker carries out a goal, such as Phishing.
+  Options: ['True', 'False']
+  Answer: False
+- [Q100] Technique refers to the specific real-world operational steps performed by an attacker.
+  Options: ['True', 'False']
+  Answer: False
+- [Q103] MITRE ATT&CK only contains attack matrices for Windows systems.
+  Options: ['True', 'False']
+  Answer: False
+- [Q109] Initial Access is the first Tactic used by attackers to enter a network.
+  Options: ['True', 'False']
+  Answer: True
+- [Q112] Understanding an attacker's Tactic (objective) helps analysts connect evidence to appropriate mitigations.
+  Options: ['True', 'False']
+  Answer: True
+- [Q132] What should be removed from the final report to prevent malicious use by others?
+  Options: ['The dates of testing', 'Recommendations for improvement', 'Specific tools used and actual testing steps', 'The summary of vulnerabilities']
+  Answer: Specific tools used and actual testing steps
+- [Q133] Which certification is specifically mentioned as one for penetration testers?
+  Options: ['Microsoft Word Expert', 'Certified Ethical Hacker (CEH)', 'Adobe Certified Professional', 'PMP']
+  Answer: Certified Ethical Hacker (CEH)
+- [Q140] What mindset must organizations employ to survive modern threats?
+  Options: ['A defensive-only mindset', 'A hacker mindset', 'A bureaucratic mindset', 'A profit-only mindset']
+  Answer: A hacker mindset
+- [Q142] In MITRE ATT&CK, what term describes what an attacker wants to achieve?
+  Options: ['Procedure', 'Technique', 'Tactic', 'ID']
+  Answer: Tactic
+- [Q148] In the MITRE ATT&CK framework, what describes what an attacker specifically did in a real-world case?
+  Options: ['Tactic', 'Technique', 'Procedure', 'Mitigation']
+  Answer: Procedure
+- [Q155] When an attacker positions themselves between two communicating parties to sniff or modify data, what is this called in MITRE?
+  Options: ['Adversary-in-the-Middle (T1557)', 'Valid Accounts', 'Phishing', 'Boot or Logon Initialization']
+  Answer: Adversary-in-the-Middle (T1557)
+- [Q157] In MITRE ATT&CK, Initial Access belongs to which category?
+  Options: ['Technique', 'Procedure', 'Tactic', 'Mitigation']
+  Answer: Tactic
+
+==================================================
+Topic: OWASP 網頁弱點與防禦 (28 questions)
+==================================================
+- [Q5] What is the primary purpose of the MITRE ATT&CK framework?
+  Options: ['Transform unstructured security incidents into structured attack behavior analysis', 'Used only for data backup', 'Replace all firewalls', 'Specifically for software development']
+  Answer: Transform unstructured security incidents into structured attack behavior analysis
+- [Q6] Which attack belongs to the category of Social Engineering?
+  Options: ['MAC Spoofing', 'Watering Hole Attack', 'ARP Spoofing', 'DoS']
+  Answer: Watering Hole Attack
+- [Q8] Which of the following security risks can disclose internal files using the file URI handler, remote code execution, and DoS attacks such as the billion laughs attack?
+  Options: ['XML external entity (XXE)', 'Command injection', 'Broken authentication', 'Cross-site scripting (XSS)']
+  Answer: XML external entity (XXE)
+- [Q9] Which of the following practices is NOT a countermeasure to defend against web server attacks?
+  Options: ['Physically protect the machine', 'Install IIS server on a domain controller', 'Store website files on a separate drive', 'Screen and filter incoming traffic']
+  Answer: Install IIS server on a domain controller
+- [Q10] In which layer of the vulnerability stack do security professionals configure solutions such as IDS and IPS?
+  Options: ['Layer 3', 'Layer 5', 'Layer 7', 'Layer 1']
+  Answer: Layer 7
+- [Q11] Identify the type of SQL injection technique used by the attacker when they cannot directly exploit any other techniques.
+  Options: ['In-band SQL injection', 'Error-based SQL injection', 'Blind SQL injection', 'Out-of-band SQL injection']
+  Answer: Blind SQL injection
+- [Q19] What is the rank of "Broken Access Control" in OWASP Top 10 (2021)?
+  Options: ['#3', '#5', '#1', '#10']
+  Answer: #1
+- [Q20] Which vulnerability involves exploiting authentication or session management functions to impersonate users?
+  Options: ['Injection', 'Broken Authentication', 'XXE', 'XSS']
+  Answer: Broken Authentication
+- [Q21] "Parameter tampering" is used to modify application data between which two entities?
+  Options: ['Database and Server', 'Client and Server', 'Router and AP', 'OS and Kernel']
+  Answer: Client and Server
+- [Q22] According to the sources, why are vulnerable components dangerous?
+  Options: ['They have no encryption', 'They often run with full privileges', 'They are only found on Windows', 'They slow down the network']
+  Answer: They often run with full privileges
+- [Q23] What does "Insufficient logging and monitoring" refer to?
+  Options: ['Recording too much data', 'Detection software ignoring important event details', 'Using weak passwords', 'Not having a firewall']
+  Answer: Detection software ignoring important event details
+- [Q26] Which is a recommended countermeasure for Sensitive Data Exposure?
+  Options: ['Generate encryption keys offline', 'Use weak algorithms for speed', 'Store session IDs in GET requests', 'Disable SSL']
+  Answer: Generate encryption keys offline
+- [Q27] To defend against SQL injection, developers should avoid building SQL statements directly from:
+  Options: ['Stored procedures', 'User input', 'Binary data', 'Parameters']
+  Answer: User input
+- [Q28] In the Ruben scenario, which security misconfiguration was detected?
+  Options: ['Improper error handling', 'Insufficient transport layer protection', 'Unvalidated inputs', 'Broken access control']
+  Answer: Insufficient transport layer protection
+- [Q39] The ""billion laughs attack"" is associated with which vulnerability?
+  Options: ['SQLi', 'XXE', 'SSRF', 'XSS']
+  Answer: XXE
+- [Q46] SQL injection only involves inserting LDAP statements into user forms.
+  Options: ['True', 'False']
+  Answer: False
+- [Q57] Broken Authentication functions include logout, timeouts, and password management.
+  Options: ['True', 'False']
+  Answer: True
+- [Q58] Which Bluetooth threat involves terrorists sending false bomb threats?
+  Options: ['Leakage of calendars', 'Sending SMS messages', 'Bugging devices', 'Causing financial losses']
+  Answer: Sending SMS messages
+- [Q59] To prevent web application attacks, non-SSL requests should be:
+  Options: ['Dropped', 'Redirected to the SSL page', 'Logged but allowed', 'Handled by Layer 3']
+  Answer: Redirected to the SSL page
+- [Q60] Which is NOT an injection type mentioned in the sources?
+  Options: ['Command injection', 'LDAP injection', 'SQL injection', 'CSS injection']
+  Answer: CSS injection
+- [Q63] Which vulnerability can lead to remote code execution and DoS via internal files?
+  Options: ['A4 – XXE', 'A1 – Injection', 'A2 – Broken Authentication', 'A9 – Vulnerable components']
+  Answer: A4 – XXE
+- [Q65] To secure a database, testing teams should avoid constructing dynamic SQL with:
+  Options: ['Prepared statements', 'Concatenated input values', 'Stored procedures', 'Multi-layer validation']
+  Answer: Concatenated input values
+- [Q68] Insufficient transport layer protection supports weak algorithms and expired certificates.
+  Options: ['True', 'False']
+  Answer: True
+- [Q69] Most web applications run libraries and frameworks with minimum privileges.
+  Options: ['True', 'False']
+  Answer: False
+- [Q70] Attackers often tamper with web application logs to hide their identities.
+  Options: ['True', 'False']
+  Answer: True
+- [Q73] Session data should be submitted as part of a GET or POST request for security.
+  Options: ['True', 'False']
+  Answer: False
+- [Q74] Setup roles and accounts should include disabling all default accounts.
+  Options: ['True', 'False']
+  Answer: True
+- [Q75] Storing website files on the OS drive is a recommended security countermeasure.
+  Options: ['True', 'False']
+  Answer: False
+
+==================================================
+Topic: SQL 注入與防禦 (4 questions)
+==================================================
+- [Q92] SQL Injection usually occurs because a system fails to properly validate or filter user input.
+  Options: ['True', 'False']
+  Answer: True
+- [Q107] SQL Injection can be used to bypass login pages and read or delete database records
+  Options: ['True', 'False']
+  Answer: True
+- [Q146] SQL Injection primarily exploits which weakness?
+  Options: ['Unstable network connections', 'Weak user passwords', 'Failure to properly validate or sanitize input data', 'Too many browser plugins']
+  Answer: Failure to properly validate or sanitize input data
+- [Q154] Which is a recommended defense against SQL Injection?
+  Options: ['Use a VPN', 'Use Parameterized Queries', 'Enable MFA', 'Review email logs']
+  Answer: Use Parameterized Queries
+
+==================================================
+Topic: Wi-Fi 安全與加密協定 (22 questions)
+==================================================
+- [Q2] In wireless security, why should the network be disabled when not required?
+  Options: ['To save battery', 'To defend against potential attacks', 'To clear the SSID', 'To reset the RADIUS server']
+  Answer: To defend against potential attacks
+- [Q16] Identify the protocol that uses AES-GCMP 256 encryption and ECDH/ECDSA key management.
+  Options: ['WEP', 'WPA3', 'WPA', 'WPA2']
+  Answer: WPA3
+- [Q17] Which mode of operation is responsible for Delivering password-based authentication using the SAE protocol?
+  Options: ['WPA3-Personal', 'WPA3-Enterprise', 'WPA2-Enterprise', 'WPA2-Personal']
+  Answer: WPA3-Personal
+- [Q29] What is the BSSID in wireless terminology?
+  Options: ['The name of the network', 'The MAC address of an Access Point', 'The frequency band', 'The connection process']
+  Answer: The MAC address of an Access Point
+- [Q31] Which spread spectrum method switches a carrier among many frequency channels?
+  Options: ['DSSS', 'OFDM', 'FHSS', 'MIMO-OFDM']
+  Answer: FHSS
+- [Q34] What does WPA2 integrate for centralized client authentication?
+  Options: ['PSK', 'EAP or RADIUS', 'SSID', 'SAE']
+  Answer: EAP or RADIUS
+- [Q36] Which protocol serves as the replacement for WEP in WPA?
+  Options: ['AES', 'TKIP', 'CCMP', 'GCMP']
+  Answer: TKIP
+- [Q37] WPA3-Personal uses which protocol for key exchange?
+  Options: ['TKIP', 'MIC', 'Dragonfly', 'Kerberos']
+  Answer: Dragonfly
+- [Q38] A ""Soft AP"" attack allows an unauthorized connection to which entity?
+  Options: ['The Internet', 'The Enterprise network', 'A Bluetooth headset', 'A specific website']
+  Answer: The Enterprise network
+- [Q50] What is a best practice for wireless configuration regarding SSID?
+  Options: ['Broadcast the SSID', 'Use SSID hiding (cloaking)', 'Keep the default SSID', 'Use the SSID as a password']
+  Answer: Use SSID hiding (cloaking)
+- [Q51] Where should a firewall be placed for wireless security?
+  Options: ['Behind the database', 'Between the AP and the corporate intranet', "On the user's laptop", 'Outside the physical machine room']
+  Answer: Between the AP and the corporate intranet
+- [Q61] Which wireless term describes the process of connecting a device to an AP?
+  Options: ['Authentication', 'Association', 'Modulation', 'Sniffing']
+  Answer: Association
+- [Q62] What is the character limit for an SSID?
+  Options: ['16', '32', '64', '128']
+  Answer: 32
+- [Q66] Which of the following application security risks occurs when untrusted data is sent to an interpreter as part of a command or query, according to the OWASP?
+  Options: ['A6 – security misconfiguration', 'A3 – Sensitive data exposure', 'A1 – injection', 'A4 – XML external entity (XXE)']
+  Answer: A1 – injection
+- [Q79] WEP is more secure than WPA2 because it uses a 24-bit IV.
+  Options: ['True', 'False']
+  Answer: False
+- [Q80] AES is a symmetric-key encryption used in WPA2.
+  Options: ['True', 'False']
+  Answer: True
+- [Q81] WPA3 uses GCMP-256 for encryption and HMAC-SHA-384 for authentication.
+  Options: ['True', 'False']
+  Answer: True
+- [Q83] Which protocol encapsulates EAP within a TLS tunnel?
+  Options: ['LEAP', 'PEAP', 'WEP', 'TKIP']
+  Answer: PEAP
+- [Q87] SSID broadcasting is considered a misconfiguration that allows SSID theft.
+  Options: ['True', 'False']
+  Answer: True
+- [Q94] WPA3 authentication uses which integrity check mechanism?
+  Options: ['BIP-GMAC-256', 'HMAC-MD5', 'MIC', 'SAE']
+  Answer: BIP-GMAC-256
+- [Q138] What is the frequency set for international industrial, scientific, and medical communities?
+  Options: ['GSM', 'ISM band', 'SSID', '5G']
+  Answer: ISM band
+- [Q149] Which protocol uses CCMP (an AES-based mode) for strong security?
+  Options: ['WEP', 'WPA', 'WPA2', 'LEAP']
+  Answer: WPA2
+
+==================================================
+Topic: 假無線 AP 與中間人攻擊 (3 questions)
+==================================================
+- [Q108] Adversary-in-the-Middle describes an attacker positioning themselves between two communicating parties.
+  Options: ['True', 'False']
+  Answer: True
+- [Q143] What is the primary purpose of a Fake WAP (Fake Wireless Access Point)?
+  Options: ['Increase network bandwidth', 'Conduct Man-in-the-Middle (MITM) attacks or steal credentials', 'Encrypt user data', 'Improve server performance']
+  Answer: Conduct Man-in-the-Middle (MITM) attacks or steal credentials
+- [Q150] Fake WAP attacks are most likely to occur in which environment?
+  Options: ['Private home offices', 'Public places such as airports and coffee shops', 'Inside data centers', 'Offline environments']
+  Answer: Public places such as airports and coffee shops
+
+==================================================
+Topic: 常考 MITRE 技術與資安工具 (21 questions)
+==================================================
+- [Q4] Exploit Public-Facing Application (T1190) is commonly associated with which attack method?
+  Options: ['SQL Injection', 'Phishing', 'Fake WAP', 'Browser Hijacker']
+  Answer: SQL Injection
+- [Q24] Which Aircrack-ng tool injects frames into a WPA TKIP network with QoS?
+  Options: ['Airtun-ng', 'Tkiptun-ng', 'Aireplay-ng', 'WZCook']
+  Answer: Tkiptun-ng
+- [Q25] Which tool supports the entire web application testing process, from mapping to exploiting vulnerabilities?
+  Options: ['Metasploit', 'Nikto', 'Burp Suite', 'Sn1per']
+  Answer: Burp Suite
+- [Q45] Which Aircrack-ng tool is used to enable monitor mode on wireless interfaces?
+  Options: ['Aircrack-ng', 'Airmon-ng', 'Airodump-ng', 'Aireplay-ng']
+  Answer: Airmon-ng
+- [Q47] Which tool is used to decrypt WEP/WPA packets and strip wireless headers?
+  Options: ['Airtun-ng', 'Easside-ng', 'Airdecap-ng', 'Airgraph-ng']
+  Answer: Airdecap-ng
+- [Q52] Which tool is a ""centralized authentication and authorization management system""?
+  Options: ['RADIUS', 'Burp Suite', 'WiMax', 'Sn1per']
+  Answer: RADIUS
+- [Q55] Which Aircrack-ng tool creates a client-to-AP relationship graph?
+  Options: ['Airbase-ng', 'Airgraph-ng', 'Airtun-ng', 'Packetforge-ng']
+  Answer: Airgraph-ng
+- [Q64] Which tool is used for automated scanning in web security?
+  Options: ['Burp Suite', 'OWASP Zed Attack Proxy', 'Nikto', 'Metasploit']
+  Answer: OWASP Zed Attack Proxy
+- [Q71] Burp Suite can find and exploit security vulnerabilities in web applications.
+  Options: ['True', 'False']
+  Answer: True
+- [Q88] Airmon-ng is used to capture WPA/WPA2 handshakes.
+  Options: ['True', 'False']
+  Answer: True
+- [Q91] Fake WAP can be mapped to Network Sniffing (T1040) in MITRE ATT&CK.
+  Options: ['True', 'False']
+  Answer: True
+- [Q98] Bait and Switch attacks are commonly associated with User Execution (T1204) in MITRE.
+  Options: ['True', 'False']
+  Answer: True
+- [Q104] Credential Stuffing (T1110.004) refers to using leaked credentials to attempt logins across multiple services.
+  Options: ['True', 'False']
+  Answer: True
+- [Q110] Airbase-ng is a tool specifically designed to repair SQL databases.
+  Options: ['True', 'False']
+  Answer: False
+- [Q116] Which wireless tool protects against denial-of-service and man-in-the-middle attacks?
+  Options: ['Weevely', 'Astra', 'RFProtect', 'Mole']
+  Answer: RFProtect
+- [Q120] The purpose of WHOIS is to exploit the target's database directly.
+  Options: ['True', 'False']
+  Answer: False
+- [Q124] Which tool is used for discovering organization info via WHOIS?
+  Options: ['Nmap', 'Nessus', 'whois', 'Medusa']
+  Answer: whois
+- [Q126] Which command is used in Nmap to perform a scan?
+  Options: ['ifconfig -a', 'apt-get update', 'nmap -sS [IP address]', 'whois target_domain']
+  Answer: nmap -sS [IP address]
+- [Q128] Which tool is primarily used for ""Remote vulnerability scanning""?
+  Options: ['HTTrack', 'Nessus', 'Google Search', 'theHarvester']
+  Answer: Nessus
+- [Q134] Which tool is used for ""Discovering and Leveraging E-mail Addresses""?
+  Options: ['theHarvester', 'Wireshark', 'Netcat', 'Cain & Abel']
+  Answer: theHarvester
+- [Q151] Which tool is commonly used to create a Fake WAP for testing or attacks?
+  Options: ['SQLmap', 'WiFi-Pumpkin', 'Wireshark', 'Metasploit']
+  Answer: WiFi-Pumpkin
+
+==================================================
+Topic: 憑證重用與防禦 (6 questions)
+==================================================
+- [Q93] Credential Reuse is mainly caused by system vulnerabilities and is unrelated to users choosing convenience.
+  Options: ['True', 'False']
+  Answer: False
+- [Q95] MFA (Multi-Factor Authentication) is an effective mitigation against credential theft.
+  Options: ['True', 'False']
+  Answer: True
+- [Q111] Network Sniffing refers to the capture of network traffic to obtain sensitive information.
+  Options: ['True', 'False']
+  Answer: True
+- [Q145] An attacker uses credentials leaked from one website to attempt logins on other platforms. What type of attack is this?
+  Options: ['SQL Injection', 'Credential Reuse', 'Browser Hijacker', 'Bait and Switch']
+  Answer: Credential Reuse
+- [Q158] Which data source is most useful for detecting attackers using Valid Accounts?
+  Options: ['Browser settings', 'Login logs or anomalous IP records', 'SQL query syntax', 'Ad-blocking records']
+  Answer: Login logs or anomalous IP records
+- [Q159] What is the best recommendation for preventing Credential Reuse?
+  Options: ['Use a VPN', 'Use a password manager and enable MFA', 'Install antivirus software', 'Avoid public Wi-Fi']
+  Answer: Use a password manager and enable MFA
+
+==================================================
+Topic: 會話劫持與傳輸加密 (5 questions)
+==================================================
+- [Q3] During Session Hijacking, what information is typically stolen?
+  Options: ["The user's physical hardware", 'Session Cookie or Session ID', "The user's BIOS password", "The router's SSID"]
+  Answer: Session Cookie or Session ID
+- [Q97] An attacker must know the user's password to perform Session Hijacking.
+  Options: ['True', 'False']
+  Answer: False
+- [Q99] Using a VPN can help prevent traffic interception on public Wi-Fi networks.
+  Options: ['True', 'False']
+  Answer: True
+- [Q102] HTTPS helps protect data in transit and reduces the risk of Man-in-the-Middle attacks.
+  Options: ['True', 'False']
+  Answer: True
+- [Q147] Which measure is most appropriate for preventing Session Hijacking?
+  Options: ['Use HTTPS and HttpOnly Cookies', 'Install an ad blocker', 'Download software only from official websites', 'Change desktop wallpapers regularly']
+  Answer: Use HTTPS and HttpOnly Cookies
+
+==================================================
+Topic: 滲透測試方法論 (8 questions)
+==================================================
+- [Q35] Which compliance standard requires organizations to perform penetration tests at least once a year?
+  Options: ['HIPAA', 'PCI-DSS', 'CEH', 'GPEN']
+  Answer: PCI-DSS
+- [Q72] Which term is defined as ""a test evaluating the strengths of all security controls""?
+  Options: ['Port Scanning', 'Social Engineering', 'Penetration Test', 'Intelligence Gathering']
+  Answer: Penetration Test
+- [Q77] Which viewpoint simulates threats originating from within the trusted network environment?
+  Options: ['External Attacker', 'Internal/Malicious Employee', 'Overt Testing', 'Reconnaissance']
+  Answer: Internal/Malicious Employee
+- [Q89] What is an advantage of ""Overt Penetration Testing""?
+  Options: ['It tests active incident response', 'Access to insider organizational knowledge', 'It is the most realistic simulation', "It is performed without the IT team's knowledge"]
+  Answer: Access to insider organizational knowledge
+- [Q101] What is a disadvantage of ""Covert Penetration Testing""?
+  Options: ['It provides full access without blocks', 'It is costly and time-consuming', 'It does not test incident response', 'It uses too many tools']
+  Answer: It is costly and time-consuming
+- [Q117] Penetration Testing evaluates procedural, operational, and technological controls.
+  Options: ['True', 'False']
+  Answer: True
+- [Q118] Overt Penetration Testing is performed without the knowledge of the IT department.
+  Options: ['True', 'False']
+  Answer: False
+- [Q119] Covert Penetration Testing most closely simulates a true adversarial attack.
+  Options: ['True', 'False']
+  Answer: True
+
+==================================================
+Topic: 漏洞掃描與評估 (8 questions)
+==================================================
+- [Q121] Password cracking and network analyzers should generally be removed from the final report to prevent abuse.
+  Options: ['True', 'False']
+  Answer: True
+- [Q122] HIPAA compliance only requires organizations to perform tests once every ten years.
+  Options: ['True', 'False']
+  Answer: False
+- [Q123] Mastery of Linux network interfaces is required before launching many security tools.
+  Options: ['True', 'False']
+  Answer: True
+- [Q130] In the reporting phase, vulnerabilities should be:
+  Options: ['Listed alphabetically', 'Prioritized', 'Hidden from the manager', 'Written in highly technical jargon']
+  Answer: Prioritized
+- [Q131] When e-mailing the final report, what must you do?
+  Options: ['Use a public cloud link', 'Encrypt all attachments', 'Send it to the entire company', 'Keep it in plain text']
+  Answer: Encrypt all attachments
+- [Q136] What is the purpose of ""Vulnerability Testing and Exploitation""?
+  Options: ['To gather contact emails', 'To check hosts for known vulnerabilities and assess severity', 'To set up a WHOIS server', 'To practice typing']
+  Answer: To check hosts for known vulnerabilities and assess severity
+- [Q137] According to Table 16-1, "Sensitive information stored on an unencrypted laptop" is considered:
+  Options: ['High Likelihood / High Impact', 'Low Likelihood / Low Impact', 'Medium Likelihood / High Impact', 'High Likelihood / Low Impact']
+  Answer: High Likelihood / High Impact
+- [Q139] Which phase involves organizing information by hosts, services, and identified hazards?
+  Options: ['Exploitation', 'Reconnaissance', 'Reporting', 'Scanning']
+  Answer: Reporting
+
+==================================================
+Topic: 瀏覽器劫持與惡意擴充 (3 questions)
+==================================================
+- [Q96] Browser Hijackers may enter a system through unsafe browser extensions.
+  Options: ['True', 'False']
+  Answer: True
+- [Q106] One way to prevent Browser Hijackers is to download browser extensions only from third-party software packages.
+  Options: ['True', 'False']
+  Answer: False
+- [Q156] What is a common symptom of a Browser Hijacker?
+  Options: ['The computer shuts down automatically', 'The homepage or search engine is changed to a malicious website', 'Hard drive data is encrypted', 'Screen resolution decreases']
+  Answer: The homepage or search engine is changed to a malicious website
+
+==================================================
+Topic: 無線網路稽核與工具 (3 questions)
+==================================================
+- [Q53] In the Samson scenario, which vulnerability process was compromised?
+  Options: ['SQL query validation', 'WPA2 four-way handshake', 'Bluetooth pairing', 'Error message handling']
+  Answer: WPA2 four-way handshake
+- [Q56] What does "MIMO-OFDM" stand for in terms of application?
+  Options: ['2G communications', '4G and 5G broadband wireless', 'Wired LAN security', 'Bluetooth middleware']
+  Answer: 4G and 5G broadband wireless
+- [Q105] Which attack technique tricks users into connecting to a rogue AP by copying its SSID?
+  Options: ['Misconfigured AP', 'Honeypot AP', 'Unauthorized association', 'Bluetooth sniffing']
+  Answer: Honeypot AP
+
+==================================================
+Topic: 社交工程與釣魚 (2 questions)
+==================================================
+- [Q144] Which MITRE Technique ID corresponds to Phishing?
+  Options: ['T1040', 'T1190', 'T1566', 'T1078']
+  Answer: T1566
+- [Q152] How does a Bait and Switch attack typically work?
+  Options: ['Directly brute-force passwords', 'Display a legitimate link first, then redirect users to malicious content', 'Steal session cookies', 'Attack a database backend']
+  Answer: Display a legitimate link first, then redirect users to malicious content
+
+==================================================
+Topic: 藍牙安全性與漏洞 (14 questions)
+==================================================
+- [Q13] Which attack allows hackers to remotely control a phone to make calls?
+  Options: ['Bluebugging', 'Bluejacking', 'BluePrinting', 'Bluesmacking']
+  Answer: Bluebugging
+- [Q32] Which IEEE amendment specifies security mechanisms for 802.11 networks?
+  Options: ['802.11i', '802.11b', '802.16', '802.11a']
+  Answer: 802.11i
+- [Q33] Which encryption algorithm uses a 24-bit Initialization Vector (IV)?
+  Options: ['WPA2', 'AES', 'WEP', 'TKIP']
+  Answer: WEP
+- [Q40] What is the goal of ""BluePrinting"" in Bluetooth attacks?
+  Options: ['Crashing the device', 'Collecting information about manufacturer and firmware', 'Stealing documents', 'Modifying data']
+  Answer: Collecting information about manufacturer and firmware
+- [Q41] Which Bluetooth attack involves sending unsolicited messages?
+  Options: ['Bluesmacking', 'Bluejacking', 'Bluesnarfing', 'Bluebugging']
+  Answer: Bluejacking
+- [Q43] The theft of information through a Bluetooth connection is called:
+  Options: ['Bluejacking', 'Bluesnarfing', 'BlueSniff', 'Bluebugging']
+  Answer: Bluesnarfing
+- [Q44] Which attack overflows Bluetooth devices with random packets to cause a crash?
+  Options: ['Bluesmacking', 'Bluejacking', 'Bluebugging', 'KNOB attack']
+  Answer: Bluesmacking
+- [Q48] The KNOB attack exploits a vulnerability in Bluetooth to perform:
+  Options: ['Denial of Service', 'Eavesdropping on shared data', 'Remote control', 'MAC spoofing']
+  Answer: Eavesdropping on shared data
+- [Q49] Which Bluetooth mode rejects every pairing request?
+  Options: ['Discoverable', 'Non-pairable', 'Pairable', 'Limited discoverable']
+  Answer: Non-pairable
+- [Q82] Bluetooth hacking refers to exploiting the physical layer hardware only.
+  Options: ['True', 'False']
+  Answer: False
+- [Q84] Bluesmacking is a DoS attack that overflows devices with random packets.
+  Options: ['True', 'False']
+  Answer: True
+- [Q85] Non-discoverable Bluetooth mode does not mean it is 100% immune to attacks.
+  Options: ['True', 'False']
+  Answer: True
+- [Q86] Bluetooth should be kept in the enabled state at all times for maximum security.
+  Options: ['True', 'False']
+  Answer: False
+- [Q127] What should be done with past paired Bluetooth devices?
+  Options: ['Keep them for convenience', 'Regularly check and delete them', 'Share them with the network', 'Use them to store keys']
+  Answer: Regularly check and delete them
+
+==================================================
+Topic: 資訊蒐集與 WHOIS (3 questions)
+==================================================
+- [Q113] What is the purpose of the ""Reconnaissance"" phase?
+  Options: ['To exploit vulnerabilities', 'To discover as much information about a target as possible without network contact', 'To write the final report', "To crash the target's server"]
+  Answer: To discover as much information about a target as possible without network contact
+- [Q125] What is the purpose of ""Network Enumeration and Scanning""?
+  Options: ['To steal credit card data', 'To discover existing networks, live hosts, and services', 'To encrypt the final report', 'To hire a hacker']
+  Answer: To discover existing networks, live hosts, and services
+- [Q135] Which command is used to bring a network interface ""up"" in Linux?
+  Options: ['poweroff', 'ifconfig eth0 up', 'apt-get install', 'dig @target_ip']
+  Answer: ifconfig eth0 up
+
+==================================================
+Topic: 道德駭客基礎與法規 (13 questions)
+==================================================
+- [Q0] What is the most critical "deadly mistake" an ethical hacker can make before starting a test?
+  Options: ['Not using Linux', 'Not getting prior approval in writing', 'Using free tools', 'Not knowing how to code']
+  Answer: Not getting prior approval in writing
+- [Q1] When obtaining documented approval, what must be included?
+  Options: ['A list of all passwords', "The hacker's home address", 'The plan, schedule, and systems to test', 'A guarantee to find all vulnerabilities']
+  Answer: The plan, schedule, and systems to test
+- [Q7] What does a ""good ethical hacker"" know?
+  Options: ['Everything about information security', 'Their limitations and where to get answers', 'Only how to use one specific tool', 'How to bypass the law']
+  Answer: Their limitations and where to get answers
+- [Q18] How should an ethical hacker view the target network?
+  Options: ["From a manager's viewpoint", "From a hacker's viewpoint", 'Only from the internal network', 'From a non-technical perspective']
+  Answer: From a hacker's viewpoint
+- [Q30] Which systems should an ethical hacker focus on?
+  Options: ['Standalone desktops with no network card', 'The most expensive hardware', 'Systems and operations that matter most', 'Only the oldest systems']
+  Answer: Systems and operations that matter most
+- [Q42] What is a risk of ""pounding production systems"" at the wrong time?
+  Options: ['It might improve system performance', 'It could take down critical systems at the worst moment', 'Managers will be impressed by the speed', 'It saves the company money']
+  Answer: It could take down critical systems at the worst moment
+- [Q54] If you outsource security testing, what is your responsibility?
+  Options: ['To stay involved throughout the entire process', 'To hand over everything and forget about it', 'To never talk to the third party', 'To do the work yourself instead']
+  Answer: To stay involved throughout the entire process
+- [Q67] 100 percent, ironclad security is easily attainable if you have a large budget.
+  Options: ['True', 'False']
+  Answer: False
+- [Q114] You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.
+  Options: ['True', 'False']
+  Answer: True
+- [Q115] Ethical hacking is a one-time event that does not need to be repeated.
+  Options: ['True', 'False']
+  Answer: False
+- [Q129] Is it possible to find all vulnerabilities during a security test?
+  Options: ['Yes, if you use the right tools', 'Yes, if you are a certified expert', 'No, because so many known and unknown vulnerabilities exist', "No, because clients won't let you see everything"]
+  Answer: No, because so many known and unknown vulnerabilities exist
+- [Q141] Regarding security vulnerabilities, which of the following is true?
+  Options: ['100 percent, ironclad security is attainable', 'Maintaining 100 percent security is not attainable', 'One test is enough to eliminate all risks', 'Patching and hardening systems is useless']
+  Answer: Maintaining 100 percent security is not attainable
+- [Q153] Why must ethical hacking tests be performed periodically?
+  Options: ['To charge the client more money', 'Because new threats and vulnerabilities surface continually', 'Software never changes', 'To practice using new tools']
+  Answer: Because new threats and vulnerabilities surface continually
+
+==================================================
+Topic: 頻譜與寬頻無線技術 (5 questions)
+==================================================
+- [Q12] Which of the following terms is a spread spectrum technique that multiplies the original data signal with a pseudo-random noise-spreading code?
+  Options: ['ISM band', 'BSSID', 'SSID', 'DSSS']
+  Answer: DSSS
+- [Q14] Identify the IEEE 802.16 standard.
+  Options: ['Wi-Fi', 'WiMax', 'ZigBee', 'Bluetooth']
+  Answer: WiMax
+- [Q15] In which of the following attacks does an attacker create a soft AP on a laptop to make the laptop’s NIC appear as a legitimate AP?
+  Options: ['Ad-hoc connection', 'Honeypot AP', 'Unauthorized association', 'AP MAC spoofing']
+  Answer: Unauthorized association
+- [Q76] DSSS spreads a signal over a wider frequency band to protect against interference.
+  Options: ['True', 'False']
+  Answer: True
+- [Q78] IEEE 802.16 is also known as WiMax.
+  Options: ['True', 'False']
+  Answer: True

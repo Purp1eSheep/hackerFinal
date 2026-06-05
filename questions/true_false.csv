@@ -1,0 +1,51 @@
+題目,答案
+SQL injection only involves inserting LDAP statements into user forms.,F
+Broken Authentication functions include logout, timeouts, and password management.,T
+Insufficient transport layer protection supports weak algorithms and expired certificates.,T
+Most web applications run libraries and frameworks with minimum privileges.,F
+Attackers often tamper with web application logs to hide their identities.,T
+Burp Suite can find and exploit security vulnerabilities in web applications.,T
+Session data should be submitted as part of a GET or POST request for security.,F
+Setup roles and accounts should include disabling all default accounts.,T
+Storing website files on the OS drive is a recommended security countermeasure.,F
+DSSS spreads a signal over a wider frequency band to protect against interference.,T
+IEEE 802.16 is also known as WiMax.,T
+WEP is more secure than WPA2 because it uses a 24-bit IV.,F
+AES is a symmetric-key encryption used in WPA2.,T
+WPA3 uses GCMP-256 for encryption and HMAC-SHA-384 for authentication.,T
+Bluetooth hacking refers to exploiting the physical layer hardware only.,F
+Bluesmacking is a DoS attack that overflows devices with random packets.,T
+Non-discoverable Bluetooth mode does not mean it is 100% immune to attacks.,T
+Bluetooth should be kept in the enabled state at all times for maximum security.,F
+SSID broadcasting is considered a misconfiguration that allows SSID theft.,T
+Airmon-ng is used to capture WPA/WPA2 handshakes.,T
+Tactic refers to how an attacker carries out a goal, such as Phishing.,F
+Fake WAP can be mapped to Network Sniffing (T1040) in MITRE ATT&CK.,T
+SQL Injection usually occurs because a system fails to properly validate or filter user input.,T
+Credential Reuse is mainly caused by system vulnerabilities and is unrelated to users choosing convenience.,F
+MFA (Multi-Factor Authentication) is an effective mitigation against credential theft.,T
+Browser Hijackers may enter a system through unsafe browser extensions.,T
+An attacker must know the user's password to perform Session Hijacking.,F
+Bait and Switch attacks are commonly associated with User Execution (T1204) in MITRE.,T
+Using a VPN can help prevent traffic interception on public Wi-Fi networks.,T
+Technique refers to the specific real-world operational steps performed by an attacker.,F
+HTTPS helps protect data in transit and reduces the risk of Man-in-the-Middle attacks.,T
+MITRE ATT&CK only contains attack matrices for Windows systems.,F
+Credential Stuffing (T1110.004) refers to using leaked credentials to attempt logins across multiple services.,T
+One way to prevent Browser Hijackers is to download browser extensions only from third-party software packages.,F
+SQL Injection can be used to bypass login pages and read or delete database records,T
+Adversary-in-the-Middle describes an attacker positioning themselves between two communicating parties.,T
+Initial Access is the first Tactic used by attackers to enter a network.,T
+Airbase-ng is a tool specifically designed to repair SQL databases.,F
+Network Sniffing refers to the capture of network traffic to obtain sensitive information.,T
+Understanding an attacker's Tactic (objective) helps analysts connect evidence to appropriate mitigations.,T
+100 percent, ironclad security is easily attainable if you have a large budget.,F
+You should obtain documented approval and a signature agreeing not to hold you liable for unintentional bad things.,T
+Ethical hacking is a one-time event that does not need to be repeated.,F
+Penetration Testing evaluates procedural, operational, and technological controls.,T
+Overt Penetration Testing is performed without the knowledge of the IT department.,F
+Covert Penetration Testing most closely simulates a true adversarial attack.,T
+The purpose of WHOIS is to exploit the target's database directly.,F
+Password cracking and network analyzers should generally be removed from the final report to prevent abuse.,T
+HIPAA compliance only requires organizations to perform tests once every ten years.,F
+Mastery of Linux network interfaces is required before launching many security tools.,T

@@ -1,32 +1,37 @@
 [
     {
         "subject": "MITRE 與網頁安全攻擊",
-        "count": 74,
+        "count": 84,
         "full_topic": "MITRE 與網頁安全攻擊",
         "topics": [
             {
                 "title": "MITRE ATT&CK 框架",
-                "count": 13,
+                "count": 12,
                 "full_topic": "MITRE ATT&CK 框架"
             },
             {
                 "title": "OWASP 網頁弱點與防禦",
-                "count": 33,
+                "count": 28,
                 "full_topic": "OWASP 網頁弱點與防禦"
             },
             {
                 "title": "SQL 注入與防禦",
-                "count": 5,
+                "count": 4,
                 "full_topic": "SQL 注入與防禦"
             },
             {
                 "title": "假無線 AP 與中間人攻擊",
-                "count": 5,
+                "count": 3,
                 "full_topic": "假無線 AP 與中間人攻擊"
             },
             {
+                "title": "常考 MITRE 技術與資安工具",
+                "count": 21,
+                "full_topic": "常考 MITRE 技術與資安工具"
+            },
+            {
                 "title": "憑證重用與防禦",
-                "count": 7,
+                "count": 6,
                 "full_topic": "憑證重用與防禦"
             },
             {
@@ -41,14 +46,14 @@
             },
             {
                 "title": "社交工程與釣魚",
-                "count": 3,
+                "count": 2,
                 "full_topic": "社交工程與釣魚"
             }
         ]
     },
     {
         "subject": "無線網路與藍牙安全",
-        "count": 50,
+        "count": 44,
         "full_topic": "無線網路與藍牙安全",
         "topics": [
             {
@@ -58,7 +63,7 @@
             },
             {
                 "title": "無線網路稽核與工具",
-                "count": 9,
+                "count": 3,
                 "full_topic": "無線網路稽核與工具"
             },
             {
@@ -75,7 +80,7 @@
     },
     {
         "subject": "道德駭客與偵查技術",
-        "count": 36,
+        "count": 32,
         "full_topic": "道德駭客與偵查技術",
         "topics": [
             {
@@ -85,12 +90,12 @@
             },
             {
                 "title": "漏洞掃描與評估",
-                "count": 9,
+                "count": 8,
                 "full_topic": "漏洞掃描與評估"
             },
             {
                 "title": "資訊蒐集與 WHOIS",
-                "count": 6,
+                "count": 3,
                 "full_topic": "資訊蒐集與 WHOIS"
             },
             {
