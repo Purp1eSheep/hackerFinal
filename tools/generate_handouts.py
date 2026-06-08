@@ -20,10 +20,8 @@ HANDOUTS = [
   * **駭客視角 (Hacker's viewpoint)**：必須以真實攻擊者的視角來檢視目標，專注於「對組織最核心且最關鍵的系統與營運流程（Systems and operations that matter most）」。
   * **生產系統防護**：切忌在尖峰時間對生產系統進行猛烈的掃描與測試（pounding production systems），不當時間測試最壞的後果是導致關鍵系統當機（taking down critical systems at the worst moment）。
   * **委外責任歸屬**：企業即使委託第三方進行測試，企業自身仍負有最終責任，且必須在整個測試過程中保持高度參與（stay involved throughout the entire process）。
-* **重要法規與認證**
-  * **HIPAA 標準**：保護醫療電子資料安全性與隱私，要求組織必須進行「定期審查（periodic reviews）」，而非每十年僅執行一次。
+ * **重要法規與認證**
   * **CEH 專業認證**：**CEH（Certified Ethical Hacker，道德駭客認證）**是專門針對滲透測試人員與安全稽核人員設計的國際知名專業認證。
-  * **前置 Linux 技能**：在啟動許多安全稽核工具前，測試人員必須熟練掌控 Linux 網路介面。
 """
     },
     {
@@ -103,12 +101,11 @@ HANDOUTS = [
     {
         "subject": "MITRE 與網頁安全攻擊",
         "topic": "社交工程與釣魚",
-        "summary": "探討網路釣魚對應代碼、誘騙轉向攻擊運作機制，以及水坑攻擊的安全類別歸屬。",
+        "summary": "探討網路釣魚對應代碼與誘騙轉向攻擊運作機制。",
         "content": """* **網路釣魚 (Phishing)**
   * **識別碼**：在 MITRE ATT&CK 中的技術識別碼為 **T1566**。
 * **社交工程手法**
   * **誘騙轉向攻擊 (Bait and Switch)**：攻擊者「先展示一個合法的連結，然後將使用者重新導向至惡意內容（Display a legitimate link first, then redirect users to malicious content）」，這在 MITRE 中對應於使用者執行（User Execution / T1204）技術。
-  * **水坑攻擊 (Watering Hole Attack)**：攻擊者攻陷目標群體常造訪的特定網站並植入惡意代碼，此攻擊手法屬於「社交工程（Social Engineering）」類別。
 """
     },
     {
@@ -121,7 +118,6 @@ HANDOUTS = [
   * **MFA 價值**：多因素驗證（MFA）是抵禦憑證竊取最有效的緩解措施。
 * **憑證攻擊偵測與監聽**
   * **有效帳戶 (Valid Accounts) 偵測**：要偵測攻擊者使用合法有效帳戶登入，最有效的資料源是「登入日誌或異常 IP 紀錄（Login logs or anomalous IP records）」。
-  * **網路嗅探 (Network Sniffing)**：指攔截或捕獲網路流量以獲取敏感資訊的行為。
 """
     },
     {
@@ -163,6 +159,7 @@ HANDOUTS = [
         "summary": "深入探討 OWASP Top 10 排行、參數篡改、XML 外部實體注入與 billion laughs DoS 攻擊、網頁伺服器部署安全防護以及防護設備配置層級。",
         "content": """* **OWASP Top 10 (2021) 弱點**
   * **第一名**：失效的存取控制（Broken Access Control）排名第 **#1**。
+  * **水坑攻擊 (Watering Hole Attack)**：攻擊者攻陷目標群體常造訪的特定網站並植入惡意代碼，屬於「社交工程（Social Engineering）」類別。
   * **失效的身份驗證 (Broken Authentication)**：藉由身份驗證與會話管理漏洞冒充用戶，包含「登出功能（logout）、會話逾時（timeouts）與密碼管理（password management）」的缺陷。
   * **參數篡改 (Parameter Tampering)**：用以修改「客戶端與伺服器（Client and Server）」之間傳遞的應用程式資料。
   * **漏洞元件與權限**：底層組件與框架通常「擁有高權限（often run with full privileges）」，並非以最小權限運行。

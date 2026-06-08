@@ -4,7 +4,7 @@ const HANDOUTS_DATA = [
         "subject": "道德駭客與偵查技術",
         "topic": "道德駭客基礎與法規",
         "summary": "介紹道德駭客的書面授權要求、安全測試的局限性、生產系統防護原則、委外管理責任以及專業認證。",
-        "content": "* **書面核准 (Prior approval in writing)**\n  * **致命錯誤**：道德駭客在開始測試前最致命的錯誤是「未取得事前的書面授權」。\n  * **同意書要件**：授權書必須包含具體的測試計畫、時程、目標系統，以及雙方簽名同意免除因非故意原因導致損害的免責聲明（agreeing not to hold you liable for unintentional bad things）。\n* **安全測試局限性**\n  * **100% 安全不可得**：即使擁有龐大預算，100% 牢不可破的安全（100 percent, ironclad security）是無法達到的。\n  * **檢測局限性**：系統中存在大量已知與未知漏洞，不可能在安全測試中發現所有漏洞。\n  * **定期評估必要性**：安全評估絕非一次性任務，必須「定期重複進行（periodically）」，因為新的威脅會持續浮現。\n  * **專業駭客認知**：優秀的道德駭客清楚「自己的局限，並知道去哪裡尋找正確答案（Their limitations and where to get answers）」。\n* **操作與風險防禦**\n  * **駭客視角 (Hacker's viewpoint)**：必須以真實攻擊者的視角來檢視目標，專注於「對組織最核心且最關鍵的系統與營運流程（Systems and operations that matter most）」。\n  * **生產系統防護**：切忌在尖峰時間對生產系統進行猛烈的掃描與測試（pounding production systems），不當時間測試最壞的後果是導致關鍵系統當機（taking down critical systems at the worst moment）。\n  * **委外責任歸屬**：企業即使委託第三方進行測試，企業自身仍負有最終責任，且必須在整個測試過程中保持高度參與（stay involved throughout the entire process）。\n* **重要法規與認證**\n  * **HIPAA 標準**：保護醫療電子資料安全性與隱私，要求組織必須進行「定期審查（periodic reviews）」，而非每十年僅執行一次。\n  * **CEH 專業認證**：**CEH（Certified Ethical Hacker，道德駭客認證）**是專門針對滲透測試人員與安全稽核人員設計的國際知名專業認證。\n  * **前置 Linux 技能**：在啟動許多安全稽核工具前，測試人員必須熟練掌控 Linux 網路介面。\n",
+        "content": "* **書面核准 (Prior approval in writing)**\n  * **致命錯誤**：道德駭客在開始測試前最致命的錯誤是「未取得事前的書面授權」。\n  * **同意書要件**：授權書必須包含具體的測試計畫、時程、目標系統，以及雙方簽名同意免除因非故意原因導致損害的免責聲明（agreeing not to hold you liable for unintentional bad things）。\n* **安全測試局限性**\n  * **100% 安全不可得**：即使擁有龐大預算，100% 牢不可破的安全（100 percent, ironclad security）是無法達到的。\n  * **檢測局限性**：系統中存在大量已知與未知漏洞，不可能在安全測試中發現所有漏洞。\n  * **定期評估必要性**：安全評估絕非一次性任務，必須「定期重複進行（periodically）」，因為新的威脅會持續浮現。\n  * **專業駭客認知**：優秀的道德駭客清楚「自己的局限，並知道去哪裡尋找正確答案（Their limitations and where to get answers）」。\n* **操作與風險防禦**\n  * **駭客視角 (Hacker's viewpoint)**：必須以真實攻擊者的視角來檢視目標，專注於「對組織最核心且最關鍵的系統與營運流程（Systems and operations that matter most）」。\n  * **生產系統防護**：切忌在尖峰時間對生產系統進行猛烈的掃描與測試（pounding production systems），不當時間測試最壞的後果是導致關鍵系統當機（taking down critical systems at the worst moment）。\n  * **委外責任歸屬**：企業即使委託第三方進行測試，企業自身仍負有最終責任，且必須在整個測試過程中保持高度參與（stay involved throughout the entire process）。\n * **重要法規與認證**\n  * **CEH 專業認證**：**CEH（Certified Ethical Hacker，道德駭客認證）**是專門針對滲透測試人員與安全稽核人員設計的國際知名專業認證。\n",
         "questions": [
             {
                 "id": "Q0",
@@ -299,8 +299,8 @@ const HANDOUTS_DATA = [
     {
         "subject": "MITRE 與網頁安全攻擊",
         "topic": "社交工程與釣魚",
-        "summary": "探討網路釣魚對應代碼、誘騙轉向攻擊運作機制，以及水坑攻擊的安全類別歸屬。",
-        "content": "* **網路釣魚 (Phishing)**\n  * **識別碼**：在 MITRE ATT&CK 中的技術識別碼為 **T1566**。\n* **社交工程手法**\n  * **誘騙轉向攻擊 (Bait and Switch)**：攻擊者「先展示一個合法的連結，然後將使用者重新導向至惡意內容（Display a legitimate link first, then redirect users to malicious content）」，這在 MITRE 中對應於使用者執行（User Execution / T1204）技術。\n  * **水坑攻擊 (Watering Hole Attack)**：攻擊者攻陷目標群體常造訪的特定網站並植入惡意代碼，此攻擊手法屬於「社交工程（Social Engineering）」類別。\n",
+        "summary": "探討網路釣魚對應代碼與誘騙轉向攻擊運作機制。",
+        "content": "* **網路釣魚 (Phishing)**\n  * **識別碼**：在 MITRE ATT&CK 中的技術識別碼為 **T1566**。\n* **社交工程手法**\n  * **誘騙轉向攻擊 (Bait and Switch)**：攻擊者「先展示一個合法的連結，然後將使用者重新導向至惡意內容（Display a legitimate link first, then redirect users to malicious content）」，這在 MITRE 中對應於使用者執行（User Execution / T1204）技術。\n",
         "questions": [
             {
                 "id": "Q41",
@@ -339,7 +339,7 @@ const HANDOUTS_DATA = [
         "subject": "MITRE 與網頁安全攻擊",
         "topic": "憑證重用與防禦",
         "summary": "分析憑證重用與憑證填充的成因，探討多因素驗證與有效帳戶偵測日誌分析。",
-        "content": "* **憑證重用 (Credential Reuse)**\n  * **成因本質**：攻擊者使用某網站外洩的憑證去嘗試登入其他服務平台。這主要是因為「使用者為了方便而做出的選擇（users choosing convenience）」，而非系統漏洞所致。\n  * **最佳防範**：預防憑證重用的最佳建議是「使用密碼管理器並啟用 MFA（Use a password manager and enable MFA）」。\n  * **MFA 價值**：多因素驗證（MFA）是抵禦憑證竊取最有效的緩解措施。\n* **憑證攻擊偵測與監聽**\n  * **有效帳戶 (Valid Accounts) 偵測**：要偵測攻擊者使用合法有效帳戶登入，最有效的資料源是「登入日誌或異常 IP 紀錄（Login logs or anomalous IP records）」。\n  * **網路嗅探 (Network Sniffing)**：指攔截或捕獲網路流量以獲取敏感資訊的行為。\n",
+        "content": "* **憑證重用 (Credential Reuse)**\n  * **成因本質**：攻擊者使用某網站外洩的憑證去嘗試登入其他服務平台。這主要是因為「使用者為了方便而做出的選擇（users choosing convenience）」，而非系統漏洞所致。\n  * **最佳防範**：預防憑證重用的最佳建議是「使用密碼管理器並啟用 MFA（Use a password manager and enable MFA）」。\n  * **MFA 價值**：多因素驗證（MFA）是抵禦憑證竊取最有效的緩解措施。\n* **憑證攻擊偵測與監聽**\n  * **有效帳戶 (Valid Accounts) 偵測**：要偵測攻擊者使用合法有效帳戶登入，最有效的資料源是「登入日誌或異常 IP 紀錄（Login logs or anomalous IP records）」。\n",
         "questions": [
             {
                 "id": "Q42",
@@ -524,7 +524,7 @@ const HANDOUTS_DATA = [
         "subject": "MITRE 與網頁安全攻擊",
         "topic": "OWASP 網頁弱點與防禦",
         "summary": "深入探討 OWASP Top 10 排行、參數篡改、XML 外部實體注入與 billion laughs DoS 攻擊、網頁伺服器部署安全防護以及防護設備配置層級。",
-        "content": "* **OWASP Top 10 (2021) 弱點**\n  * **第一名**：失效的存取控制（Broken Access Control）排名第 **#1**。\n  * **失效的身份驗證 (Broken Authentication)**：藉由身份驗證與會話管理漏洞冒充用戶，包含「登出功能（logout）、會話逾時（timeouts）與密碼管理（password management）」的缺陷。\n  * **參數篡改 (Parameter Tampering)**：用以修改「客戶端與伺服器（Client and Server）」之間傳遞的應用程式資料。\n  * **漏洞元件與權限**：底層組件與框架通常「擁有高權限（often run with full privileges）」，並非以最小權限運行。\n  * **不足的記錄與監控**：指偵測軟體「忽略了重要的事件細節（Detection software ignoring important event details）」，攻擊者常會「篡改網頁應用程式日誌」以隱藏真實身份。\n  * **敏感資料外洩防範**：建議的防範對策為「在離線狀態下生成與管理加密金鑰（Generate encryption keys offline）」。\n  * **XXE (XML 外部實體注入 / A4)**：解析器未限制外部實體載入，危害包含「讀取伺服器內部檔案（透過 file:// URI 處理常式）」、「遠端代碼執行」與「發動 DoS 攻擊」，經典手法如巢狀 XML 實體膨脹的「Billion Laughs 實體膨脹 DoS 攻擊」。\n* **網頁伺服器防禦與部署**\n  * **IIS 部署位置**：切勿將 IIS 伺服器安裝在「網域控制站（Domain Controller）」上。\n  * **磁碟防護部署**：網站檔案必須存放在「獨立的磁碟分割區（separate drive）」，不可直接存放在作業系統 OS 磁碟區上。\n  * **HTTPS 強制導向**：所有非 SSL（HTTP）請求應被「重新導向至 SSL（HTTPS）頁面」。\n  * **帳戶安全**：建立帳戶時應「停用所有的預設帳戶（disabling all default accounts）」。\n* **傳輸層與會話安全**\n  * **保護不足特徵**：「傳輸層保護不足（Insufficient transport layer protection）」的漏洞特徵為支援弱加密演算法與過期憑證。在 Ruben 案例中，被檢測到的安全配置錯誤即為此項。\n  * **會話傳遞路徑**：Session 識別資料「不應（NOT）」作為 GET 或 POST 的 URL 參數明文傳遞。\n* **防禦與防護設備配置**\n  * **IPS/IDS 部署**：安全稽核人員常在「第 7 層（Layer 7 - 應用層）」配置入侵偵測系統（IDS）與入侵防禦系統（IPS）。\n",
+        "content": "* **OWASP Top 10 (2021) 弱點**\n  * **第一名**：失效的存取控制（Broken Access Control）排名第 **#1**。\n  * **水坑攻擊 (Watering Hole Attack)**：攻擊者攻陷目標群體常造訪的特定網站並植入惡意代碼，屬於「社交工程（Social Engineering）」類別。\n  * **失效的身份驗證 (Broken Authentication)**：藉由身份驗證與會話管理漏洞冒充用戶，包含「登出功能（logout）、會話逾時（timeouts）與密碼管理（password management）」的缺陷。\n  * **參數篡改 (Parameter Tampering)**：用以修改「客戶端與伺服器（Client and Server）」之間傳遞的應用程式資料。\n  * **漏洞元件與權限**：底層組件與框架通常「擁有高權限（often run with full privileges）」，並非以最小權限運行。\n  * **不足的記錄與監控**：指偵測軟體「忽略了重要的事件細節（Detection software ignoring important event details）」，攻擊者常會「篡改網頁應用程式日誌」以隱藏真實身份。\n  * **敏感資料外洩防範**：建議的防範對策為「在離線狀態下生成與管理加密金鑰（Generate encryption keys offline）」。\n  * **XXE (XML 外部實體注入 / A4)**：解析器未限制外部實體載入，危害包含「讀取伺服器內部檔案（透過 file:// URI 處理常式）」、「遠端代碼執行」與「發動 DoS 攻擊」，經典手法如巢狀 XML 實體膨脹的「Billion Laughs 實體膨脹 DoS 攻擊」。\n* **網頁伺服器防禦與部署**\n  * **IIS 部署位置**：切勿將 IIS 伺服器安裝在「網域控制站（Domain Controller）」上。\n  * **磁碟防護部署**：網站檔案必須存放在「獨立的磁碟分割區（separate drive）」，不可直接存放在作業系統 OS 磁碟區上。\n  * **HTTPS 強制導向**：所有非 SSL（HTTP）請求應被「重新導向至 SSL（HTTPS）頁面」。\n  * **帳戶安全**：建立帳戶時應「停用所有的預設帳戶（disabling all default accounts）」。\n* **傳輸層與會話安全**\n  * **保護不足特徵**：「傳輸層保護不足（Insufficient transport layer protection）」的漏洞特徵為支援弱加密演算法與過期憑證。在 Ruben 案例中，被檢測到的安全配置錯誤即為此項。\n  * **會話傳遞路徑**：Session 識別資料「不應（NOT）」作為 GET 或 POST 的 URL 參數明文傳遞。\n* **防禦與防護設備配置**\n  * **IPS/IDS 部署**：安全稽核人員常在「第 7 層（Layer 7 - 應用層）」配置入侵偵測系統（IDS）與入侵防禦系統（IPS）。\n",
         "questions": [
             {
                 "id": "Q2",

@@ -1,17 +1,17 @@
 [
     {
         "subject": "MITRE 與網頁安全攻擊",
-        "count": 84,
+        "count": 82,
         "full_topic": "MITRE 與網頁安全攻擊",
         "topics": [
             {
                 "title": "MITRE ATT&CK 框架",
-                "count": 12,
+                "count": 11,
                 "full_topic": "MITRE ATT&CK 框架"
             },
             {
                 "title": "OWASP 網頁弱點與防禦",
-                "count": 28,
+                "count": 27,
                 "full_topic": "OWASP 網頁弱點與防禦"
             },
             {
@@ -26,12 +26,12 @@
             },
             {
                 "title": "常考 MITRE 技術與資安工具",
-                "count": 21,
+                "count": 22,
                 "full_topic": "常考 MITRE 技術與資安工具"
             },
             {
                 "title": "憑證重用與防禦",
-                "count": 6,
+                "count": 5,
                 "full_topic": "憑證重用與防禦"
             },
             {
@@ -58,7 +58,7 @@
         "topics": [
             {
                 "title": "Wi-Fi 安全與加密協定",
-                "count": 22,
+                "count": 23,
                 "full_topic": "Wi-Fi 安全與加密協定"
             },
             {
@@ -68,7 +68,7 @@
             },
             {
                 "title": "藍牙安全性與漏洞",
-                "count": 14,
+                "count": 13,
                 "full_topic": "藍牙安全性與漏洞"
             },
             {
@@ -80,7 +80,7 @@
     },
     {
         "subject": "道德駭客與偵查技術",
-        "count": 32,
+        "count": 34,
         "full_topic": "道德駭客與偵查技術",
         "topics": [
             {
@@ -90,7 +90,7 @@
             },
             {
                 "title": "漏洞掃描與評估",
-                "count": 8,
+                "count": 9,
                 "full_topic": "漏洞掃描與評估"
             },
             {
@@ -100,7 +100,7 @@
             },
             {
                 "title": "道德駭客基礎與法規",
-                "count": 13,
+                "count": 14,
                 "full_topic": "道德駭客基礎與法規"
             }
         ]
